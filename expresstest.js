@@ -58,26 +58,30 @@ function fileMiddleware (req, res, next) {
 	
 }
 function errorMiddleware(err,res,req,next){
-    res.sendFile(path.join(__dirname,  '404.html' ))
+    res.endFile(path.join(__dirname,  '404.html' ))
 }
-app.get('/',errorMiddleware);
+function directoryList(res,req,next){
+    var filesList = ''
+    fs.readdir(__dirname , (err,files) => {
+    	if (err) throw err
+    
+    
+    	else{
+    		files.map((x)=>{
+    		    filesList += x
+    		})
+            res.send(fileList)
+    	}
+    })
+    // res.sendFile(path.join(__dirname,  '404.html' ))
+}
+app.get('/',directoryList);
 // app.get('/', function (req, res) {
 //  res.send(JSON.stringify({ Hello: 'World'}));
 // });
 
 /* code that helps see where your files are */ //{
-// var filesList = ''
-// fs.readdir(__dirname , (err,files) => {
-// 	if (err) throw err
 
-
-// 	else{
-// 		files.map((x)=>{
-// 		    filesList += x
-// 		})
-//         res.end(fileList)
-// 	}
-// })
 // }  /**/
 
 app.listen(port, () => console.log(`${file_name} app listening on port ${port}!`))
