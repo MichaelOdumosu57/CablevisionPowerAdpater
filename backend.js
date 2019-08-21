@@ -196,9 +196,7 @@ function fileMiddleware (req, res, next) {
 }
 
 app.get('/:file',  fileMiddleware);
-app.get('/',  (req, res, next){
-    res.end("<h1>Hello World</h1>")
-});
+app.get('/',fileMiddleware);
 
 
 

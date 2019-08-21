@@ -26,7 +26,7 @@ var redirectsValue = [
 // }  /**/
 
 var server
-// function generateBackend(   dev_obj   ){
+function generateBackend(   dev_obj   ){
     
 server = http.createServer((req, res) => {
     
@@ -48,9 +48,32 @@ if(   req.url.indexOf('/CablevisionPowerAdpater/dependencies/index/') !== -1   )
 	    
     }
     
-    dependencyRequest = fs.readFileSync(   path.join(__dirname,'dependencies','index',req.url.split("/")[req.url.split("/").length-1] )   )
-	res.end(   dependencyRequest   )
-	generateBackend()
+    fs.readFile(   path.join(__dirname,'dependencies','index',req.url.split("/")[req.url.split("/").length-1] ),(err,fileRequest)=>{
+       
+        
+        if(   err   ){
+            
+            
+            fs.readFile(   path.join(__dirname,'404.html'),(err,fileRequest)=>{
+                
+                
+                if(   err   ){
+                    
+                    
+                    res.end(   '<h1>404 page not found</h1>'   )
+                    
+                    
+                }
+                
+                
+                res.end(    fileRequest   )
+            })
+            
+            
+        }
+        
+    })
+
 	
 }
 
@@ -70,10 +93,32 @@ if(   req.url.indexOf('/CablevisionPowerAdpater/dependencies/index/') === -1   )
             
             
             endRequest = 'true'
-            console.log('sending '+ redirectsValue[b]   )
-            fileRequest= fs.readFileSync(   path.join(__dirname,redirectsValue[b])   )
-            res.end(    fileRequest   )
-            generateBackend()
+            fileRequest= fs.readFile(   path.join(__dirname,redirectsValue[b]),(err,fileRequest)=>{
+               
+                
+                if(   err   ){
+                    
+                    
+                    fs.readFile(   path.join(__dirname,'404.html'),(err,fileRequest)=>{
+                        
+                        
+                        if(   err   ){
+                            
+                            
+                            res.end(   '<h1>404 page not found</h1>'   )
+                            
+                            
+                        }
+                        
+                        
+                        res.end(    fileRequest   )
+                    })
+                    
+                    
+                }
+                
+            })
+            
             
             
         }
@@ -86,9 +131,21 @@ if(   req.url.indexOf('/CablevisionPowerAdpater/dependencies/index/') === -1   )
         
         
         console.log('sending 404')
-        fileRequest = fs.readFileSync(   path.join(__dirname,'404.html')   )
-        res.end(    fileRequest   )
-        generateBackend()
+        fs.readFile(   path.join(__dirname,'404.html'),(err,fileRequest)=>{
+                        
+                        
+                        if(   err   ){
+                            
+                            
+                            res.end(   '<h1>404 page not found</h1>'   )
+                            
+                            
+                        }
+                        
+                        
+                        res.end(    fileRequest   )
+                    })
+        
         
     }
     // }  /**/
@@ -98,9 +155,7 @@ if(   req.url.indexOf('/CablevisionPowerAdpater/dependencies/index/') === -1   )
 }
 // }  /**/
 
-if(   server.listening === false   ){
 
-}
 
 
 /* code that helps see where your files are */ //{
@@ -124,9 +179,9 @@ server.on('request',()=>{
     console.log('request')
 })
 
-// }
+}
 
-// generateBackend()
+generateBackend()
 server.listen(port,() => {
   console.log(`Server running at port `+port);
 });
