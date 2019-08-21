@@ -216,7 +216,7 @@ app.get('/CablevisionPowerAdpater/dependencies/index/:file', function (req, res,
     }
     
     
-	res.sendFile(path.join(projectPath,'dependencies','index',req.url.split("/")[req.url.split("/").length-1] ))
+	res.sendFile(path.join(__dirname,'dependencies','index',req.url.split("/")[req.url.split("/").length-1] ))
 });
 
 // }  /**/
