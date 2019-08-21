@@ -252,8 +252,8 @@ function heroku(   dev_obj   ){
     
     const server = http.createServer((req, res) => {
       res.statusCode = 200;
-      res.setHeader('Content-Type', 'text/plain');
-      res.end(   __dirname   );
+      res.setHeader('Content-Type', 'text/html');
+      res.end('<h1>'+__dirname+'</h1>');
     });
     
     server.listen(port,() => {
@@ -262,19 +262,20 @@ function heroku(   dev_obj   ){
     
 }
 
-if(   process.args[2] !== undefined   ){
+// if(   process.args[2] !== undefined   ){
     
     
+//     heroku()
+    
+    
+// }
+
+
+// if(   process.args[2] === undefined   ){
+    
+    
+//     noHeroku()
+    
+    
+// }
     heroku()
-    
-    
-}
-
-
-if(   process.args[2] === undefined   ){
-    
-    
-    noHeroku()
-    
-    
-}
