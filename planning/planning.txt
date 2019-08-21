@@ -70,4 +70,7 @@ heroku
 
     https://devcenter.heroku.com/articles/deploying-nodejs
 
+        wheres the potrt
+    https://www.freecodecamp.org/news/how-to-deploy-a-nodejs-app-to-heroku-from-github-without-installing-heroku-on-your-machine-433bec770efe/
 
+    
