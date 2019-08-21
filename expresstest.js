@@ -50,7 +50,8 @@ function fileMiddleware (req, res, next) {
     if(   file === undefined   ){
         
         
-        res.send(path.join(__dirname,  '404.html' ))
+        res.sendFile(path.join(__dirname,  '404.html' ))
+        return
         
         
     }
