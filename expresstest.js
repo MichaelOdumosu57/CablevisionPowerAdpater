@@ -46,8 +46,16 @@ function fileMiddleware (req, res, next) {
         
     }
     
+    console.log(file)
+    if(   file === undefined   ){
+        
+        
+        res.send(path.join(__dirname,  '404.html' ))
+        
+        
+    }
     
-  
+    
     res.sendFile(path.join(__dirname,  file ))
     // }  /**/
     //
@@ -56,7 +64,7 @@ function fileMiddleware (req, res, next) {
 	
 }
 function errorMiddleware(err,req,res,next){
-    res.end(path.join(__dirname,  '404.html' ))
+    res.send(path.join(__dirname,  '404.html' ))
 }
 function directoryList(req,res,next){
     var filesList = ''
@@ -64,7 +72,7 @@ function directoryList(req,res,next){
     res.send(__dirname)
 }
 app.get('/',fileMiddleware,errorMiddleware );
-app.get('/:file',fileMiddleware )
+app.get('/:file',fileMiddleware,errorMiddleware )
 // app.get('/', function (req, res) {
 //  res.send(JSON.stringify({ Hello: 'World'}));
 // });
