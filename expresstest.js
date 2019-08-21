@@ -22,6 +22,14 @@ var redirects= {
                     'services':'services.html',
                 }
  // }  /**/
+ 
+ 
+/* express app configure*/ //{
+app.use(cors())
+app.use(compression())
+app.set('etag', false)
+ // }  /**/
+ 
 
 
 app.get('/', function (req, res) {
