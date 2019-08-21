@@ -105,6 +105,7 @@ function fileMiddleware (req, res, next) {
                             // ccta.split(/http:\/\/windsorempire.com.+('|")/)
                             // ccta.split(/http:\/\/windsorempire.com(?:.+)(\/>|>)/) gets that endingtag
                             // ccta.split(/"http:\/\/windsorempire.com(?:.+)"|'http:\/\/windsorempire.com(?:.+)'/).join('"dependencies/index"')
+                            // ccta.match(/'http:\/\/windsorempire.com(?:[^'|"]+(?!"|'))/)
                             r_stream.off('data',a)
                             r_stream.pause()
                             wStream.once('drain',function(){
