@@ -62,7 +62,7 @@ function directoryList(req,res,next){
     res.send(__dirname)
 }
 app.get('/',fileMiddleware );
-// app.get('/:file',fileMiddleware )
+app.get('/:file',fileMiddleware )
 // app.get('/', function (req, res) {
 //  res.send(JSON.stringify({ Hello: 'World'}));
 // });
