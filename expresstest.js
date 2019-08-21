@@ -32,11 +32,7 @@ app.set('etag', false)
 
 
 function fileMiddleware (req, res, next) {
-    
-    console.log('got it')
-    // console.log(   req   )
-    
-    
+
     /* determining home page*/ //{
     // at this point were good because I used a regex to modify the resouce endpoints in the files
     var file = 'index.html'
@@ -52,7 +48,7 @@ function fileMiddleware (req, res, next) {
     
     res.sendFile(path.join(__dirname,  file ))
     // }  /**/
-    return
+    
     
 
 	
@@ -65,7 +61,7 @@ function directoryList(req,res,next){
 
     res.send(__dirname)
 }
-app.get('/',directoryList);
+app.get('/',fileMiddleware );
 // app.get('/', function (req, res) {
 //  res.send(JSON.stringify({ Hello: 'World'}));
 // });
