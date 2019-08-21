@@ -2,6 +2,13 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 4200 // angular port rmbr to change this
 const file_name = __filename.split("/")[__filename.split("/").length-1].split(".js")[0]
+const path = require('path')
+const fs = require('fs');
+const compression = require('compression')
+const cors = require('cors')
+// const ultraObject = require('./ultraObject.js')
+const http = require("https");
+
 
 app.get('/', function (req, res) {
  res.send(JSON.stringify({ Hello: 'World'}));
