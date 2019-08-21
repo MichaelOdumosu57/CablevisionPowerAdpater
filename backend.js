@@ -5,7 +5,7 @@
 
 const express = require('express')
 const app = express()
-const port = 443 // angular port rmbr to change this
+const port = process.env.PORT // angular port rmbr to change this
 const file_name = __filename.split("/")[__filename.split("/").length-1].split(".js")[0]
 const path = require('path')
 const fs = require('fs');
