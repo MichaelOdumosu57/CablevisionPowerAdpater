@@ -17,56 +17,211 @@ const http = require("https");
 
 
 
+
+
 /* application global variables*/ //{
 var projectPath = '/home/uoul/My_Computer/Projects/WindsorEmpire'
+var w_file = 'modfied.html'
+var redirects= {
+                    '/':'index.html',
+                    'startMyBusiness':'about.html',
+                    'contact':'contact.html',
+                    'projects':'projects.html',
+                    'blog':'blog.html',
+                    'credits':'credits.html',
+                    'services':'services.html',
+                }
  // }  /**/
+ 
+
+/* express app configure*/ //{
 app.use(cors())
 app.use(compression())
 app.set('etag', false)
+ // }  /**/
+
+
+function fileMiddleware (req, res, next) {
+    
+    
+    /* determining home page*/ //{
+    var file = 'index'
+    
+    
+    if(   req.params.file !== undefined   ){
+        
+        
+        file = redirects[req.params.file]
+        
+        
+    }
+    // }  /**/
+    
+    console.log(   'saw ' + file   )
+    var response = res
+    const wStream = fs.createWriteStream(w_file,{
+          start:0,
+          autoClose:true
+    })
+    wStream.on('error',  function(err){
+        setImmediate(() => {
+            console.log('error thrown in writeStream close everything ',err)
+            this.end()
+            // console.log(this)
+
+        });
+    });
+    wStream.once('finish',function(   ){
+        // console.log('All writes are now complete. writestream closed');
+        response.sendFile(w_file)
+    })
+    wStream.on('pipe', (src) => {
+      console.error('something is piping into the writer');
+      // assert.equal(src, r_stream);
+    });
+    wStream.on('unpipe', (src) => {
+      console.error('Something has stopped piping into the writer.');
+      // assert.equal(src, r_stream);
+    });
+    // console.log('writable stream intializaed')
+    var receiving = new Promise((resolve,reject)=>{
+        try {
+          fs.accessSync(__dirname +'/' + file + '.html', fs.constants.R_OK);
+          console.log('can read/write');
+        }
+        catch (err) {
+            res.sendFile(path.join(projectPath,'404.html'))
+        }
+        const r_stream = fs.createReadStream(__dirname +'/' + req.params.file ,{
+          start:0,
+          autoClose:true
+        })
+        resolve( new Promise((resolve,reject)=>{
+            function a(chunk){
+                    console.log(chunk)
+                    setImmediate(() =>{
+                        if(   !wStream.write(   chunk.toString().split("&lt;").join("< ").split("&lt").join("< ")  )  ){
+                            
+                            //regex ccta.split(/http:\/\/windsorempire.com.+('|")/)
+                            r_stream.off('data',a)
+                            r_stream.pause()
+                            wStream.once('drain',function(){
+                                 r_stream.resume()
+                                 r_stream.on('data',a)
+                            })
+                        }
+                    })
+            }
+            r_stream.on('end',()=>{
+              setImmediate(() => {
+                r_stream.resume(); //this helps clear the buffer
+                wStream.end()
+              })
+            })
+            r_stream.on('close',()=>{
+              setImmediate(() =>{
+                // console.log("looks like the fd was closed by the stream ")
+              })
+            })
+            r_stream.on('data',a)
+            console.log('readable stream intializaed')
+            resolve()
+        })).catch((err)=>{
+                console.log('2')
+                console.log(err)
+                console.log('couldnt get the read stream started')
+                wStream.end()
+            })
+    }).catch((err)=>{
+        console.log(err)
+        const r_stream = fs.createReadStream(rFile,{
+          start:0,
+          autoClose:true
+        })
+        new Promise((resolve,reject)=>{
+            function a(chunk){
+                    console.log(chunk)
+                    setImmediate(() =>{
+                        if(   !wStream.write(   chunk.toString().split("&lt;").join("< ").split("&lt").join("< ")  )  ){
+                            r_stream.off('data',a)
+                            r_stream.pause()
+                            wStream.once('drain',function(){
+                                 r_stream.resume()
+                                 r_stream.on('data',a)
+                            })
+                        }
+                    })
+            }
+            r_stream.on('end',()=>{
+              setImmediate(() => {
+                r_stream.resume(); //this helps clear the buffer
+                wStream.end()
+              })
+            })
+            r_stream.on('close',()=>{
+              setImmediate(() =>{
+                // console.log("looks like the fd was closed by the stream ")
+              })
+            })
+            r_stream.on('data',a)
+            console.log('readable stream intializaed')
+            resolve()
+        }).catch((err)=>{
+                console.log('2')
+                console.log(err)
+                console.log('couldnt get the read stream started')
+                wStream.end()
+            })
+    }).catch((err)=>{
+        console.log('2')
+        console.log(err)
+        console.log('couldnt get the read stream started')
+        wStream.end()
+    })
+
+	
+}
+
+app.get('/:file',  fileMiddleware);
+app.get('/',  fileMiddleware);
 
 
 
-app.get('/', function (req, res, next) {
-    console.log('saw it')
-	res.sendFile(path.join(projectPath,'index.html'))
-});
+// app.get('/startMyBusiness', function (req, res, next) {
+//     console.log('saw it')
+// 	res.sendFile(path.join(projectPath,'about.html'))
+// });
 
 
-app.get('/startMyBusiness', function (req, res, next) {
-    console.log('saw it')
-	res.sendFile(path.join(projectPath,'about.html'))
-});
+// app.get('/contact', function (req, res, next) {
+//     console.log('saw it')
+// 	res.sendFile(path.join(projectPath,'contact.html'))
+// });
 
+// app.get('/projects', function (req, res, next) {
+//     console.log('saw it')
+// 	res.sendFile(path.join(projectPath,'projects.html'))
+// });
 
-app.get('/contact', function (req, res, next) {
-    console.log('saw it')
-	res.sendFile(path.join(projectPath,'contact.html'))
-});
+// app.get('/blog', function (req, res, next) {
+//     console.log('saw it')
+// 	res.sendFile(path.join(projectPath,'blog.html'))
+// });
 
-app.get('/projects', function (req, res, next) {
-    console.log('saw it')
-	res.sendFile(path.join(projectPath,'projects.html'))
-});
+// app.get('/credits', function (req, res, next) {
+//     console.log('saw it')
+// 	res.sendFile(path.join(projectPath,'credits.html'))
+// });
 
-app.get('/blog', function (req, res, next) {
-    console.log('saw it')
-	res.sendFile(path.join(projectPath,'blog.html'))
-});
-
-app.get('/credits', function (req, res, next) {
-    console.log('saw it')
-	res.sendFile(path.join(projectPath,'credits.html'))
-});
-
-app.get('/services', function (req, res, next) {
-	res.sendFile(path.join(projectPath,'services.html'))
-});
+// app.get('/services', function (req, res, next) {
+// 	res.sendFile(path.join(projectPath,'services.html'))
+// });
 
 /*endpoint for all application dependencies*/ //{
-app.get('/dependencies/:file', function (req, res, next) {
+app.get('/dependencies/index/:file', function (req, res, next) {
     // console.log(   req.url  )
     // console.log(   path.join(projectPath,'dependencies/index',req.url.split("/")[req.url.split("/").length-1]   )   )
-	res.sendFile(path.join(projectPath,'dependencies/index',req.url.split("/")[req.url.split("/").length-1] ))
+	res.sendFile(path.join(projectPath,'dependencies','index',req.url.split("/")[req.url.split("/").length-1] ))
 });
 
 // }  /**/
@@ -76,7 +231,7 @@ app.get('/myJS/:file', function (req, res, next) {
     if(   req.params.file.indexOf('css') !== -1){
         
         
-        res.append('MIME-type', 'text/css');
+        // res.append('MIME-type', 'text/css');
         
 	    
 	    
