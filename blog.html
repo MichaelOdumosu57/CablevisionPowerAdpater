@@ -1,1531 +1,228 @@
-<!DOCTYPE html>
-<html lang="en-US">
+<head><head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='profile' href='https://gmpg.org/xfn/11'>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="profile" href="https://gmpg.org/xfn/11">
-
-    <title>Blog &#8211; windsorempire</title>
-    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
-    <link rel='dns-prefetch' href='//s.w.org' />
-    <link rel="alternate" type="application/rss+xml" title="windsorempire &raquo; Feed" href="http://windsorempire.com/feed/" />
-    <link rel="alternate" type="application/rss+xml" title="windsorempire &raquo; Comments Feed" href="http://windsorempire.com/comments/feed/" />
-    <script type="text/javascript">
-        window._wpemojiSettings = {
-            "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/",
-            "ext": ".png",
-            "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/",
-            "svgExt": ".svg",
-            "source": {
-                "concatemoji": "http:\/\/windsorempire.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.1"
-            }
-        };
-        ! function(a, b, c) {
-            function d(a, b) {
-                var c = String.fromCharCode;
-                l.clearRect(0, 0, k.width, k.height), l.fillText(c.apply(this, a), 0, 0);
-                var d = k.toDataURL();
-                l.clearRect(0, 0, k.width, k.height), l.fillText(c.apply(this, b), 0, 0);
-                var e = k.toDataURL();
-                return d === e
-            }
-
-            function e(a) {
-                var b;
-                if (!l || !l.fillText) return !1;
-                switch (l.textBaseline = "top", l.font = "600 32px Arial", a) {
-                    case "flag":
-                        return !(b = d([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819])) && (b = d([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]), !b);
-                    case "emoji":
-                        return b = d([55358, 56760, 9792, 65039], [55358, 56760, 8203, 9792, 65039]), !b
-                }
-                return !1
-            }
-
-            function f(a) {
-                var c = b.createElement("script");
-                c.src = a, c.defer = c.type = "text/javascript", b.getElementsByTagName("head")[0].appendChild(c)
-            }
-            var g, h, i, j, k = b.createElement("canvas"),
-                l = k.getContext && k.getContext("2d");
-            for (j = Array("flag", "emoji"), c.supports = {
-                    everything: !0,
-                    everythingExceptFlag: !0
-                }, i = 0; i < j.length; i++) c.supports[j[i]] = e(j[i]), c.supports.everything = c.supports.everything && c.supports[j[i]], "flag" !== j[i] && (c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && c.supports[j[i]]);
-            c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && !c.supports.flag, c.DOMReady = !1, c.readyCallback = function() {
-                c.DOMReady = !0
-            }, c.supports.everything || (h = function() {
-                c.readyCallback()
-            }, b.addEventListener ? (b.addEventListener("DOMContentLoaded", h, !1), a.addEventListener("load", h, !1)) : (a.attachEvent("onload", h), b.attachEvent("onreadystatechange", function() {
-                "complete" === b.readyState && c.readyCallback()
-            })), g = c.source || {}, g.concatemoji ? f(g.concatemoji) : g.wpemoji && g.twemoji && (f(g.twemoji), f(g.wpemoji)))
-        }(window, document, window._wpemojiSettings);
-    </script>
-    <style type="text/css">
-        img.wp-smiley,
-        img.emoji {
-            display: inline !important;
-            border: none !important;
-            box-shadow: none !important;
-            height: 1em !important;
-            width: 1em !important;
-            margin: 0 .07em !important;
-            vertical-align: -0.1em !important;
-            background: none !important;
-            padding: 0 !important;
-        }
-    </style>
-    <link rel='stylesheet' id='dashicons-css' href='http://windsorempire.com/wp-includes/css/dashicons.min.css?ver=5.1.1' type='text/css' media='all' />
-    <link rel='stylesheet' id='admin-bar-css' href='http://windsorempire.com/wp-includes/css/admin-bar.min.css?ver=5.1.1' type='text/css' media='all' />
-    <link rel='stylesheet' id='astra-theme-css-css' href='http://windsorempire.com/wp-content/themes/astra/assets/css/minified/style.min.css?ver=1.8.5' type='text/css' media='all' />
-    <style id='astra-theme-css-inline-css' type='text/css'>
-        html {
-            font-size: 100%;
-        }
-        
-        a,
-        .page-title {
-            color: #fb2056;
-        }
-        
-        a:hover,
-        a:focus {
-            color: #fb2056;
-        }
-        
-        body,
-        button,
-        input,
-        select,
-        textarea {
-            font-family: 'Noto Sans', sans-serif;
-            font-weight: 400;
-            font-size: 16px;
-            font-size: 1rem;
-            line-height: 1.49;
-        }
-        
-        blockquote {
-            color: #000000;
-        }
-        
-        h1,
-        .entry-content h1,
-        h2,
-        .entry-content h2,
-        h3,
-        .entry-content h3,
-        h4,
-        .entry-content h4,
-        h5,
-        .entry-content h5,
-        h6,
-        .entry-content h6,
-        .site-title,
-        .site-title a {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-        }
-        
-        .site-title {
-            font-size: 35px;
-            font-size: 2.1875rem;
-        }
-        
-        header .site-logo-img .custom-logo-link img {
-            max-width: 102px;
-        }
-        
-        .astra-logo-svg {
-            width: 102px;
-        }
-        
-        .ast-archive-description .ast-archive-title {
-            font-size: 40px;
-            font-size: 2.5rem;
-        }
-        
-        .site-header .site-description {
-            font-size: 17px;
-            font-size: 1.0625rem;
-        }
-        
-        .entry-title {
-            font-size: 30px;
-            font-size: 1.875rem;
-        }
-        
-        .comment-reply-title {
-            font-size: 26px;
-            font-size: 1.625rem;
-        }
-        
-        .ast-comment-list #cancel-comment-reply-link {
-            font-size: 16px;
-            font-size: 1rem;
-        }
-        
-        h1,
-        .entry-content h1 {
-            font-size: 64px;
-            font-size: 4rem;
-        }
-        
-        h2,
-        .entry-content h2 {
-            font-size: 32px;
-            font-size: 2rem;
-        }
-        
-        h3,
-        .entry-content h3 {
-            font-size: 24px;
-            font-size: 1.5rem;
-        }
-        
-        h4,
-        .entry-content h4 {
-            font-size: 20px;
-            font-size: 1.25rem;
-        }
-        
-        h5,
-        .entry-content h5 {
-            font-size: 18px;
-            font-size: 1.125rem;
-        }
-        
-        h6,
-        .entry-content h6 {
-            font-size: 15px;
-            font-size: 0.9375rem;
-        }
-        
-        .ast-single-post .entry-title,
-        .page-title {
-            font-size: 30px;
-            font-size: 1.875rem;
-        }
-        
-        #secondary,
-        #secondary button,
-        #secondary input,
-        #secondary select,
-        #secondary textarea {
-            font-size: 16px;
-            font-size: 1rem;
-        }
-        
-        ::selection {
-            background-color: #fb2056;
-            color: #ffffff;
-        }
-        
-        body,
-        h1,
-        .entry-title a,
-        .entry-content h1,
-        h2,
-        .entry-content h2,
-        h3,
-        .entry-content h3,
-        h4,
-        .entry-content h4,
-        h5,
-        .entry-content h5,
-        h6,
-        .entry-content h6 {
-            color: #222222;
-        }
-        
-        .tagcloud a:hover,
-        .tagcloud a:focus,
-        .tagcloud a.current-item {
-            color: #ffffff;
-            border-color: #fb2056;
-            background-color: #fb2056;
-        }
-        
-        .main-header-menu a,
-        .ast-header-custom-item a {
-            color: #222222;
-        }
-        
-        .main-header-menu li:hover > a,
-        .main-header-menu li:hover > .ast-menu-toggle,
-        .main-header-menu .ast-masthead-custom-menu-items a:hover,
-        .main-header-menu li.focus > a,
-        .main-header-menu li.focus > .ast-menu-toggle,
-        .main-header-menu .current-menu-item > a,
-        .main-header-menu .current-menu-ancestor > a,
-        .main-header-menu .current_page_item > a,
-        .main-header-menu .current-menu-item > .ast-menu-toggle,
-        .main-header-menu .current-menu-ancestor > .ast-menu-toggle,
-        .main-header-menu .current_page_item > .ast-menu-toggle {
-            color: #fb2056;
-        }
-        
-        input:focus,
-        input[type="text"]:focus,
-        input[type="email"]:focus,
-        input[type="url"]:focus,
-        input[type="password"]:focus,
-        input[type="reset"]:focus,
-        input[type="search"]:focus,
-        textarea:focus {
-            border-color: #fb2056;
-        }
-        
-        input[type="radio"]:checked,
-        input[type=reset],
-        input[type="checkbox"]:checked,
-        input[type="checkbox"]:hover:checked,
-        input[type="checkbox"]:focus:checked,
-        input[type=range]::-webkit-slider-thumb {
-            border-color: #fb2056;
-            background-color: #fb2056;
-            box-shadow: none;
-        }
-        
-        .site-footer a:hover + .post-count,
-        .site-footer a:focus + .post-count {
-            background: #fb2056;
-            border-color: #fb2056;
-        }
-        
-        .ast-small-footer {
-            color: #d3d3d3;
-        }
-        
-        .ast-small-footer > .ast-footer-overlay {
-            background-color: #191919;
-        }
-        
-        .ast-small-footer a {
-            color: #fb2056;
-        }
-        
-        .ast-small-footer a:hover {
-            color: #fb2056;
-        }
-        
-        .footer-adv .footer-adv-overlay {
-            border-top-style: solid;
-            border-top-color: #7a7a7a;
-        }
-        
-        .ast-comment-meta {
-            line-height: 1.666666667;
-            font-size: 13px;
-            font-size: 0.8125rem;
-        }
-        
-        .single .nav-links .nav-previous,
-        .single .nav-links .nav-next,
-        .single .ast-author-details .author-title,
-        .ast-comment-meta {
-            color: #fb2056;
-        }
-        
-        .menu-toggle,
-        button,
-        .ast-button,
-        .button,
-        input#submit,
-        input[type="button"],
-        input[type="submit"],
-        input[type="reset"] {
-            border-radius: 60px;
-            padding: 8px 38px;
-            color: #ffffff;
-            border-color: #fb2056;
-            background-color: #fb2056;
-        }
-        
-        button:focus,
-        .menu-toggle:hover,
-        button:hover,
-        .ast-button:hover,
-        .button:hover,
-        input[type=reset]:hover,
-        input[type=reset]:focus,
-        input#submit:hover,
-        input#submit:focus,
-        input[type="button"]:hover,
-        input[type="button"]:focus,
-        input[type="submit"]:hover,
-        input[type="submit"]:focus {
-            color: #ffffff;
-            border-color: #fb2056;
-            background-color: #fb2056;
-        }
-        
-        .entry-meta,
-        .entry-meta * {
-            line-height: 1.45;
-            color: #fb2056;
-        }
-        
-        .entry-meta a:hover,
-        .entry-meta a:hover *,
-        .entry-meta a:focus,
-        .entry-meta a:focus * {
-            color: #fb2056;
-        }
-        
-        .ast-404-layout-1 .ast-404-text {
-            font-size: 200px;
-            font-size: 12.5rem;
-        }
-        
-        .widget-title {
-            font-size: 22px;
-            font-size: 1.375rem;
-            color: #222222;
-        }
-        
-        #cat option,
-        .secondary .calendar_wrap thead a,
-        .secondary .calendar_wrap thead a:visited {
-            color: #fb2056;
-        }
-        
-        .secondary .calendar_wrap #today,
-        .ast-progress-val span {
-            background: #fb2056;
-        }
-        
-        .secondary a:hover + .post-count,
-        .secondary a:focus + .post-count {
-            background: #fb2056;
-            border-color: #fb2056;
-        }
-        
-        .calendar_wrap #today > a {
-            color: #ffffff;
-        }
-        
-        .ast-pagination a,
-        .page-links .page-link,
-        .single .post-navigation a {
-            color: #fb2056;
-        }
-        
-        .ast-pagination a:hover,
-        .ast-pagination a:focus,
-        .ast-pagination > span:hover:not(.dots),
-        .ast-pagination > span.current,
-        .page-links > .page-link,
-        .page-links .page-link:hover,
-        .post-navigation a:hover {
-            color: #fb2056;
-        }
-        
-        .ast-header-break-point .ast-mobile-menu-buttons-minimal.menu-toggle {
-            background: transparent;
-            color: #fb2056;
-        }
-        
-        .ast-header-break-point .ast-mobile-menu-buttons-outline.menu-toggle {
-            background: transparent;
-            border: 1px solid #fb2056;
-            color: #fb2056;
-        }
-        
-        .ast-header-break-point .ast-mobile-menu-buttons-fill.menu-toggle {
-            background: #fb2056;
-        }
-        
-        .main-header-bar .button-custom-menu-item .ast-custom-button-link .ast-custom-button {
-            padding-top: 10px;
-            padding-bottom: 10px;
-            padding-left: 26px;
-            padding-right: 26px;
-            border-style: solid;
-            border-top-width: 0px;
-            border-right-width: 0px;
-            border-left-width: 0px;
-            border-bottom-width: 0px;
-        }
-        
-        .ast-theme-transparent-header .main-header-bar .button-custom-menu-item .ast-custom-button-link .ast-custom-button {
-            color: rgba(255, 255, 255, 0.9);
-            background-color: rgba(255, 255, 255, 0);
-            padding-top: 8px;
-            padding-bottom: 8px;
-            padding-left: 22px;
-            padding-right: 22px;
-            border-style: solid;
-            border-color: rgba(255, 255, 255, 0.9);
-            border-top-width: 2px;
-            border-right-width: 2px;
-            border-left-width: 2px;
-            border-bottom-width: 2px;
-        }
-        
-        .ast-theme-transparent-header .main-header-bar .button-custom-menu-item .ast-custom-button-link .ast-custom-button:hover {
-            color: #ffffff;
-            background-color: #fb2056;
-            border-color: #fb2056;
-        }
-        
-        @media (min-width:545px) {
-            .ast-page-builder-template .comments-area,
-            .single.ast-page-builder-template .entry-header,
-            .single.ast-page-builder-template .post-navigation {
-                max-width: 1240px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-        
-        @media (max-width:768px) {
-            .ast-archive-description .ast-archive-title {
-                font-size: 40px;
-            }
-            .entry-title {
-                font-size: 30px;
-            }
-            h1,
-            .entry-content h1 {
-                font-size: 44px;
-            }
-            h2,
-            .entry-content h2 {
-                font-size: 25px;
-            }
-            h3,
-            .entry-content h3 {
-                font-size: 20px;
-            }
-            .ast-single-post .entry-title,
-            .page-title {
-                font-size: 30px;
-            }
-        }
-        
-        @media (max-width:544px) {
-            .comment-reply-title {
-                font-size: 24px;
-                font-size: 1.6rem;
-            }
-            .ast-comment-meta {
-                font-size: 12px;
-                font-size: 0.8rem;
-            }
-            .widget-title {
-                font-size: 21px;
-                font-size: 1.4rem;
-            }
-            body,
-            button,
-            input,
-            select,
-            textarea {
-                font-size: 15px;
-                font-size: 0.9375rem;
-            }
-            .ast-comment-list #cancel-comment-reply-link {
-                font-size: 15px;
-                font-size: 0.9375rem;
-            }
-            #secondary,
-            #secondary button,
-            #secondary input,
-            #secondary select,
-            #secondary textarea {
-                font-size: 15px;
-                font-size: 0.9375rem;
-            }
-            .site-title {
-                font-size: 20px;
-                font-size: 1.25rem;
-            }
-            .ast-archive-description .ast-archive-title {
-                font-size: 40px;
-            }
-            .site-header .site-description {
-                font-size: 14px;
-                font-size: 0.875rem;
-            }
-            .entry-title {
-                font-size: 30px;
-            }
-            h1,
-            .entry-content h1 {
-                font-size: 30px;
-            }
-            h2,
-            .entry-content h2 {
-                font-size: 24px;
-            }
-            h3,
-            .entry-content h3 {
-                font-size: 20px;
-            }
-            h4,
-            .entry-content h4 {
-                font-size: 19px;
-                font-size: 1.1875rem;
-            }
-            h5,
-            .entry-content h5 {
-                font-size: 16px;
-                font-size: 1rem;
-            }
-            h6,
-            .entry-content h6 {
-                font-size: 15px;
-                font-size: 0.9375rem;
-            }
-            .ast-single-post .entry-title,
-            .page-title {
-                font-size: 30px;
-            }
-            .ast-header-break-point .site-branding img,
-            .ast-header-break-point #masthead .site-logo-img .custom-logo-link img {
-                max-width: 100px;
-            }
-            .astra-logo-svg {
-                width: 100px;
-            }
-            .ast-header-break-point .site-logo-img .custom-mobile-logo-link img {
-                max-width: 100px;
-            }
-        }
-        
-        @media (max-width:768px) {
-            html {
-                font-size: 91.2%;
-            }
-        }
-        
-        @media (max-width:544px) {
-            html {
-                font-size: 100%;
-            }
-        }
-        
-        @media (min-width:769px) {
-            .ast-container {
-                max-width: 1240px;
-            }
-        }
-        
-        @font-face {
-            font-family: "Astra";
-            src: url(http://windsorempire.com/wp-content/themes/astra/assets/fonts/astra.woff) format("woff"), url(http://windsorempire.com/wp-content/themes/astra/assets/fonts/astra.ttf) format("truetype"), url(http://windsorempire.com/wp-content/themes/astra/assets/fonts/astra.svg#astra) format("svg");
-            font-weight: normal;
-            font-style: normal;
-            font-display: fallback;
-        }
-        
-        @media (max-width:921px) {
-            .main-header-bar .main-header-bar-navigation {
-                display: none;
-            }
-        }
-        
-        .ast-desktop .main-header-menu.submenu-with-border .sub-menu,
-        .ast-desktop .main-header-menu.submenu-with-border .children,
-        .ast-desktop .main-header-menu.submenu-with-border .astra-full-megamenu-wrapper {
-            border-color: #fb2056;
-        }
-        
-        .ast-desktop .main-header-menu.submenu-with-border .sub-menu,
-        .ast-desktop .main-header-menu.submenu-with-border .children {
-            border-top-width: 2px;
-            border-right-width: 0px;
-            border-left-width: 0px;
-            border-bottom-width: 0px;
-            border-style: solid;
-        }
-        
-        .ast-desktop .main-header-menu.submenu-with-border .sub-menu .sub-menu,
-        .ast-desktop .main-header-menu.submenu-with-border .children .children {
-            top: -2px;
-        }
-        
-        .ast-desktop .main-header-menu.submenu-with-border .sub-menu a,
-        .ast-desktop .main-header-menu.submenu-with-border .children a {
-            border-bottom-width: 0px;
-            border-style: solid;
-            border-color: #eaeaea;
-        }
-        
-        @media (min-width:769px) {
-            .main-header-menu .sub-menu li.ast-left-align-sub-menu:hover > ul,
-            .main-header-menu .sub-menu li.ast-left-align-sub-menu.focus > ul {
-                margin-left: -0px;
-            }
-        }
-        
-        .ast-small-footer {
-            border-top-style: solid;
-            border-top-width: 0;
-            border-top-color: #7a7a7a;
-        }
-        
-        .ast-small-footer-wrap {
-            text-align: center;
-        }
-        
-        @media (max-width:920px) {
-            .ast-404-layout-1 .ast-404-text {
-                font-size: 100px;
-                font-size: 6.25rem;
-            }
-        }
-        
-        .ast-header-break-point .site-header {
-            border-bottom-width: 0;
-        }
-        
-        @media (min-width:769px) {
-            .main-header-bar {
-                border-bottom-width: 0;
-            }
-        }
-        
-        .main-header-menu .menu-item,
-        .main-header-bar .ast-masthead-custom-menu-items {
-            -js-display: flex;
-            display: flex;
-            -webkit-box-pack: center;
-            -webkit-justify-content: center;
-            -moz-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -webkit-flex-direction: column;
-            -moz-box-orient: vertical;
-            -moz-box-direction: normal;
-            -ms-flex-direction: column;
-            flex-direction: column;
-        }
-        
-        .main-header-menu > .menu-item > a {
-            height: 100%;
-            -webkit-box-align: center;
-            -webkit-align-items: center;
-            -moz-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            -js-display: flex;
-            display: flex;
-        }
-        
-        .ast-primary-menu-disabled .main-header-bar .ast-masthead-custom-menu-items {
-            flex: unset;
-        }
-        
-        @media (min-width:769px) {
-            .ast-theme-transparent-header #masthead {
-                position: absolute;
-                left: 0;
-                right: 0;
-            }
-            .ast-theme-transparent-header .main-header-bar,
-            .ast-theme-transparent-header.ast-header-break-point .main-header-bar {
-                background: none;
-            }
-            body.elementor-editor-active.ast-theme-transparent-header #masthead,
-            .fl-builder-edit .ast-theme-transparent-header #masthead,
-            body.vc_editor.ast-theme-transparent-header #masthead {
-                z-index: 0;
-            }
-            .ast-header-break-point.ast-replace-site-logo-transparent.ast-theme-transparent-header .custom-mobile-logo-link {
-                display: none;
-            }
-            .ast-header-break-point.ast-replace-site-logo-transparent.ast-theme-transparent-header .transparent-custom-logo {
-                display: inline-block;
-            }
-            .ast-theme-transparent-header .ast-above-header {
-                background-image: none;
-                background-color: transparent;
-            }
-            .ast-theme-transparent-header .ast-below-header {
-                background-image: none;
-                background-color: transparent;
-            }
-        }
-        
-        .ast-theme-transparent-header .main-header-bar,
-        .ast-theme-transparent-header.ast-header-break-point .main-header-menu,
-        .ast-theme-transparent-header.ast-header-break-point .main-header-bar {
-            background-color: rgba(249, 154, 211, 0.42);
-        }
-        
-        .ast-theme-transparent-header .main-header-bar .ast-search-menu-icon form {
-            background-color: rgba(249, 154, 211, 0.42);
-        }
-        
-        .ast-theme-transparent-header .ast-above-header,
-        .ast-theme-transparent-header .ast-below-header {
-            background-color: rgba(249, 154, 211, 0.42);
-        }
-        
-        .ast-theme-transparent-header .site-title a,
-        .ast-theme-transparent-header .site-title a:focus,
-        .ast-theme-transparent-header .site-title a:hover,
-        .ast-theme-transparent-header .site-title a:visited {
-            color: #ffffff;
-        }
-        
-        .ast-theme-transparent-header .site-header .site-title a:hover {
-            color: #f99ab4;
-        }
-        
-        .ast-theme-transparent-header .site-header .site-description {
-            color: #ffffff;
-        }
-        
-        .ast-theme-transparent-header .main-header-menu,
-        .ast-theme-transparent-header.ast-header-break-point .main-header-menu {
-            background-color: rgba(12, 12, 12, 0);
-        }
-        
-        .ast-theme-transparent-header .main-header-menu ul.sub-menu {
-            background-color: rgba(206, 95, 176, 0.8);
-        }
-        
-        .ast-theme-transparent-header .main-header-menu,
-        .ast-theme-transparent-header .main-header-menu a,
-        .ast-theme-transparent-header .ast-masthead-custom-menu-items,
-        .ast-theme-transparent-header .ast-masthead-custom-menu-items a,
-        .ast-theme-transparent-header .main-header-menu li > .ast-menu-toggle,
-        .ast-theme-transparent-header .main-header-menu li > .ast-menu-toggle {
-            color: #ffffff;
-        }
-        
-        .ast-theme-transparent-header .main-header-menu li:hover > a,
-        .ast-theme-transparent-header .main-header-menu li:hover > .ast-menu-toggle,
-        .ast-theme-transparent-header .main-header-menu .ast-masthead-custom-menu-items a:hover,
-        .ast-theme-transparent-header .main-header-menu .focus > a,
-        .ast-theme-transparent-header .main-header-menu .focus > .ast-menu-toggle,
-        .ast-theme-transparent-header .main-header-menu .current-menu-item > a,
-        .ast-theme-transparent-header .main-header-menu .current-menu-ancestor > a,
-        .ast-theme-transparent-header .main-header-menu .current_page_item > a,
-        .ast-theme-transparent-header .main-header-menu .current-menu-item > .ast-menu-toggle,
-        .ast-theme-transparent-header .main-header-menu .current-menu-ancestor > .ast-menu-toggle,
-        .ast-theme-transparent-header .main-header-menu .current_page_item > .ast-menu-toggle {
-            color: rgba(249, 184, 223, 0.69);
-        }
-        
-        @media (max-width:768px) {
-            .ast-theme-transparent-header #masthead {
-                position: absolute;
-                left: 0;
-                right: 0;
-            }
-            .ast-theme-transparent-header .main-header-bar,
-            .ast-theme-transparent-header.ast-header-break-point .main-header-bar {
-                background: none;
-            }
-            body.elementor-editor-active.ast-theme-transparent-header #masthead,
-            .fl-builder-edit .ast-theme-transparent-header #masthead,
-            body.vc_editor.ast-theme-transparent-header #masthead {
-                z-index: 0;
-            }
-            .ast-header-break-point.ast-replace-site-logo-transparent.ast-theme-transparent-header .custom-mobile-logo-link {
-                display: none;
-            }
-            .ast-header-break-point.ast-replace-site-logo-transparent.ast-theme-transparent-header .transparent-custom-logo {
-                display: inline-block;
-            }
-            .ast-theme-transparent-header .ast-above-header {
-                background-image: none;
-                background-color: transparent;
-            }
-            .ast-theme-transparent-header .ast-below-header {
-                background-image: none;
-                background-color: transparent;
-            }
-        }
-        
-        @media (max-width:768px) {
-            .ast-theme-transparent-header .site-title a,
-            .ast-theme-transparent-header .site-title a:focus,
-            .ast-theme-transparent-header .site-title a:hover,
-            .ast-theme-transparent-header .site-title a:visited {
-                color: #ffffff;
-            }
-            .ast-theme-transparent-header .site-header .site-description {
-                color: #ffffff;
-            }
-            .ast-theme-transparent-header .main-header-menu,
-            .ast-theme-transparent-header .main-header-menu a,
-            .ast-theme-transparent-header .ast-masthead-custom-menu-items,
-            .ast-theme-transparent-header .ast-masthead-custom-menu-items a,
-            .ast-theme-transparent-header .main-header-menu li > .ast-menu-toggle,
-            .ast-theme-transparent-header .main-header-menu li > .ast-menu-toggle {
-                color: #fb2056;
-            }
-            .ast-theme-transparent-header .main-header-menu li:hover > a,
-            .ast-theme-transparent-header .main-header-menu li:hover > .ast-menu-toggle,
-            .ast-theme-transparent-header .main-header-menu .ast-masthead-custom-menu-items a:hover,
-            .ast-theme-transparent-header .main-header-menu .focus > a,
-            .ast-theme-transparent-header .main-header-menu .focus > .ast-menu-toggle,
-            .ast-theme-transparent-header .main-header-menu .current-menu-item > a,
-            .ast-theme-transparent-header .main-header-menu .current-menu-ancestor > a,
-            .ast-theme-transparent-header .main-header-menu .current_page_item > a,
-            .ast-theme-transparent-header .main-header-menu .current-menu-item > .ast-menu-toggle,
-            .ast-theme-transparent-header .main-header-menu .current-menu-ancestor > .ast-menu-toggle,
-            .ast-theme-transparent-header .main-header-menu .current_page_item > .ast-menu-toggle {
-                color: #000000;
-            }
-        }
-        
-        @media (max-width:544px) {
-            .ast-theme-transparent-header .main-header-menu,
-            .ast-theme-transparent-header .main-header-menu a,
-            .ast-theme-transparent-header .ast-masthead-custom-menu-items,
-            .ast-theme-transparent-header .ast-masthead-custom-menu-items a,
-            .ast-theme-transparent-header .main-header-menu li > .ast-menu-toggle,
-            .ast-theme-transparent-header .main-header-menu li > .ast-menu-toggle {
-                color: #fb2056;
-            }
-            .ast-theme-transparent-header .main-header-menu li:hover > a,
-            .ast-theme-transparent-header .main-header-menu li:hover > .ast-menu-toggle,
-            .ast-theme-transparent-header .main-header-menu .ast-masthead-custom-menu-items a:hover,
-            .ast-theme-transparent-header .main-header-menu .focus > a,
-            .ast-theme-transparent-header .main-header-menu .focus > .ast-menu-toggle,
-            .ast-theme-transparent-header .main-header-menu .current-menu-item > a,
-            .ast-theme-transparent-header .main-header-menu .current-menu-ancestor > a,
-            .ast-theme-transparent-header .main-header-menu .current_page_item > a,
-            .ast-theme-transparent-header .main-header-menu .current-menu-item > .ast-menu-toggle,
-            .ast-theme-transparent-header .main-header-menu .current-menu-ancestor > .ast-menu-toggle,
-            .ast-theme-transparent-header .main-header-menu .current_page_item > .ast-menu-toggle {
-                color: #000000;
-            }
-        }
-        
-        .ast-theme-transparent-header .main-header-bar,
-        .ast-theme-transparent-header .site-header {
-            border-bottom-width: 0;
-            border-bottom-color: #ffffff;
-        }
-        
-        .ast-breadcrumbs .trail-browse,
-        .ast-breadcrumbs .trail-items,
-        .ast-breadcrumbs .trail-items li {
-            display: inline-block;
-            margin: 0;
-            padding: 0;
-            border: none;
-            background: inherit;
-            text-indent: 0;
-        }
-        
-        .ast-breadcrumbs .trail-browse {
-            font-size: inherit;
-            font-style: inherit;
-            font-weight: inherit;
-            color: inherit;
-        }
-        
-        .ast-breadcrumbs .trail-items {
-            list-style: none;
-        }
-        
-        .trail-items li::after {
-            padding: 0 0.3em;
-            content: "»";
-        }
-        
-        .trail-items li:last-of-type::after {
-            display: none;
-        }
-    </style>
-    <link rel='stylesheet' id='astra-google-fonts-css' href='//fonts.googleapis.com/css?family=Noto+Sans%3A400%2C700%7CMontserrat%3A700%2C&#038;display=fallback&#038;ver=1.8.5' type='text/css' media='all' />
-    <link rel='stylesheet' id='astra-menu-animation-css' href='http://windsorempire.com/wp-content/themes/astra/assets/css/minified/menu-animation.min.css?ver=1.8.5' type='text/css' media='all' />
-    <link rel='stylesheet' id='elementor-icons-css' href='http://windsorempire.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=4.3.0' type='text/css' media='all' />
-    <link rel='stylesheet' id='elementor-common-css' href='http://windsorempire.com/wp-content/plugins/elementor/assets/css/common.min.css?ver=2.5.16' type='text/css' media='all' />
-    <link rel='stylesheet' id='wp-block-library-css' href='http://windsorempire.com/wp-includes/css/dist/block-library/style.min.css?ver=5.1.1' type='text/css' media='all' />
-    <!--[if IE]>
-<script type='text/javascript' src='http://windsorempire.com/wp-content/themes/astra/assets/js/minified/flexibility.min.js?ver=1.8.5'></script>
+<title>Blog – windsorempire</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com'>
+<link rel='dns-prefetch' href='//s.w.org'>
+<link rel='alternate' type='application/rss+xml' title='windsorempire » Feed' href='/CablevisionPowerAdpater/dependencies/index/'>
+<link rel='alternate' type='application/rss+xml' title='windsorempire » Comments Feed' href='/CablevisionPowerAdpater/dependencies/index/'>
+		<script type='text/javascript'>
+			window._wpemojiSettings = {'baseUrl':'https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/','ext':'.png','svgUrl':'https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/','svgExt':'.svg','source':{'concatemoji':'http:\/\/windsorempire.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.1'}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline='top',l.font='600 32px Arial',a){case'flag':return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case'emoji':return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement('script');c.src=a,c.defer=c.type='text/javascript',b.getElementsByTagName('head')[0].appendChild(c)}var g,h,i,j,k=b.createElement('canvas'),l=k.getContext&&k.getContext('2d');for(j=Array('flag','emoji'),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],'flag'!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener('DOMContentLoaded',h,!1),a.addEventListener('load',h,!1)):(a.attachEvent('onload',h),b.attachEvent('onreadystatechange',function(){'complete'===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src='/CablevisionPowerAdpater/dependencies/index/wp-emoji-release.min.js?ver=5.1.1' type='text/javascript' defer=''></script>
+		<style type='text/css'>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='astra-theme-css-css' href='/CablevisionPowerAdpater/dependencies/index/style.min.css?ver=1.8.5' type='text/css' media='all'>
+<style id='astra-theme-css-inline-css' type='text/css'>
+html{font-size:100%;}a,.page-title{color:#fb2056;}a:hover,a:focus{color:#fb2056;}body,button,input,select,textarea{font-family:'Noto Sans',sans-serif;font-weight:400;font-size:16px;font-size:1rem;line-height:1.49;}blockquote{color:#000000;}h1,.entry-content h1,h2,.entry-content h2,h3,.entry-content h3,h4,.entry-content h4,h5,.entry-content h5,h6,.entry-content h6,.site-title,.site-title a{font-family:'Montserrat',sans-serif;font-weight:700;}.site-title{font-size:35px;font-size:2.1875rem;}header .site-logo-img .custom-logo-link img{max-width:102px;}.astra-logo-svg{width:102px;}.ast-archive-description .ast-archive-title{font-size:40px;font-size:2.5rem;}.site-header .site-description{font-size:17px;font-size:1.0625rem;}.entry-title{font-size:30px;font-size:1.875rem;}.comment-reply-title{font-size:26px;font-size:1.625rem;}.ast-comment-list #cancel-comment-reply-link{font-size:16px;font-size:1rem;}h1,.entry-content h1{font-size:64px;font-size:4rem;}h2,.entry-content h2{font-size:32px;font-size:2rem;}h3,.entry-content h3{font-size:24px;font-size:1.5rem;}h4,.entry-content h4{font-size:20px;font-size:1.25rem;}h5,.entry-content h5{font-size:18px;font-size:1.125rem;}h6,.entry-content h6{font-size:15px;font-size:0.9375rem;}.ast-single-post .entry-title,.page-title{font-size:30px;font-size:1.875rem;}#secondary,#secondary button,#secondary input,#secondary select,#secondary textarea{font-size:16px;font-size:1rem;}::selection{background-color:#fb2056;color:#ffffff;}body,h1,.entry-title a,.entry-content h1,h2,.entry-content h2,h3,.entry-content h3,h4,.entry-content h4,h5,.entry-content h5,h6,.entry-content h6{color:#222222;}.tagcloud a:hover,.tagcloud a:focus,.tagcloud a.current-item{color:#ffffff;border-color:#fb2056;background-color:#fb2056;}.main-header-menu a,.ast-header-custom-item a{color:#222222;}.main-header-menu li:hover > a,.main-header-menu li:hover > .ast-menu-toggle,.main-header-menu .ast-masthead-custom-menu-items a:hover,.main-header-menu li.focus > a,.main-header-menu li.focus > .ast-menu-toggle,.main-header-menu .current-menu-item > a,.main-header-menu .current-menu-ancestor > a,.main-header-menu .current_page_item > a,.main-header-menu .current-menu-item > .ast-menu-toggle,.main-header-menu .current-menu-ancestor > .ast-menu-toggle,.main-header-menu .current_page_item > .ast-menu-toggle{color:#fb2056;}input:focus,input[type='text']:focus,input[type='email']:focus,input[type='url']:focus,input[type='password']:focus,input[type='reset']:focus,input[type='search']:focus,textarea:focus{border-color:#fb2056;}input[type='radio']:checked,input[type=reset],input[type='checkbox']:checked,input[type='checkbox']:hover:checked,input[type='checkbox']:focus:checked,input[type=range]::-webkit-slider-thumb{border-color:#fb2056;background-color:#fb2056;box-shadow:none;}.site-footer a:hover + .post-count,.site-footer a:focus + .post-count{background:#fb2056;border-color:#fb2056;}.ast-small-footer{color:#d3d3d3;}.ast-small-footer > .ast-footer-overlay{background-color:#191919;}.ast-small-footer a{color:#fb2056;}.ast-small-footer a:hover{color:#fb2056;}.footer-adv .footer-adv-overlay{border-top-style:solid;border-top-color:#7a7a7a;}.ast-comment-meta{line-height:1.666666667;font-size:13px;font-size:0.8125rem;}.single .nav-links .nav-previous,.single .nav-links .nav-next,.single .ast-author-details .author-title,.ast-comment-meta{color:#fb2056;}.menu-toggle,button,.ast-button,.button,input#submit,input[type='button'],input[type='submit'],input[type='reset']{border-radius:60px;padding:8px 38px;color:#ffffff;border-color:#fb2056;background-color:#fb2056;}button:focus,.menu-toggle:hover,button:hover,.ast-button:hover,.button:hover,input[type=reset]:hover,input[type=reset]:focus,input#submit:hover,input#submit:focus,input[type='button']:hover,input[type='button']:focus,input[type='submit']:hover,input[type='submit']:focus{color:#ffffff;border-color:#fb2056;background-color:#fb2056;}.entry-meta,.entry-meta *{line-height:1.45;color:#fb2056;}.entry-meta a:hover,.entry-meta a:hover *,.entry-meta a:focus,.entry-meta a:focus *{color:#fb2056;}.ast-404-layout-1 .ast-404-text{font-size:200px;font-size:12.5rem;}.widget-title{font-size:22px;font-size:1.375rem;color:#222222;}#cat option,.secondary .calendar_wrap thead a,.secondary .calendar_wrap thead a:visited{color:#fb2056;}.secondary .calendar_wrap #today,.ast-progress-val span{background:#fb2056;}.secondary a:hover + .post-count,.secondary a:focus + .post-count{background:#fb2056;border-color:#fb2056;}.calendar_wrap #today > a{color:#ffffff;}.ast-pagination a,.page-links .page-link,.single .post-navigation a{color:#fb2056;}.ast-pagination a:hover,.ast-pagination a:focus,.ast-pagination > span:hover:not(.dots),.ast-pagination > span.current,.page-links > .page-link,.page-links .page-link:hover,.post-navigation a:hover{color:#fb2056;}.ast-header-break-point .ast-mobile-menu-buttons-minimal.menu-toggle{background:transparent;color:#fb2056;}.ast-header-break-point .ast-mobile-menu-buttons-outline.menu-toggle{background:transparent;border:1px solid #fb2056;color:#fb2056;}.ast-header-break-point .ast-mobile-menu-buttons-fill.menu-toggle{background:#fb2056;}.main-header-bar .button-custom-menu-item .ast-custom-button-link .ast-custom-button{padding-top:10px;padding-bottom:10px;padding-left:26px;padding-right:26px;border-style:solid;border-top-width:0px;border-right-width:0px;border-left-width:0px;border-bottom-width:0px;}.ast-theme-transparent-header .main-header-bar .button-custom-menu-item .ast-custom-button-link .ast-custom-button{color:rgba(255,255,255,0.9);background-color:rgba(255,255,255,0);padding-top:8px;padding-bottom:8px;padding-left:22px;padding-right:22px;border-style:solid;border-color:rgba(255,255,255,0.9);border-top-width:2px;border-right-width:2px;border-left-width:2px;border-bottom-width:2px;}.ast-theme-transparent-header .main-header-bar .button-custom-menu-item .ast-custom-button-link .ast-custom-button:hover{color:#ffffff;background-color:#fb2056;border-color:#fb2056;}@media (min-width:545px){.ast-page-builder-template .comments-area,.single.ast-page-builder-template .entry-header,.single.ast-page-builder-template .post-navigation{max-width:1240px;margin-left:auto;margin-right:auto;}}@media (max-width:768px){.ast-archive-description .ast-archive-title{font-size:40px;}.entry-title{font-size:30px;}h1,.entry-content h1{font-size:44px;}h2,.entry-content h2{font-size:25px;}h3,.entry-content h3{font-size:20px;}.ast-single-post .entry-title,.page-title{font-size:30px;}}@media (max-width:544px){.comment-reply-title{font-size:24px;font-size:1.6rem;}.ast-comment-meta{font-size:12px;font-size:0.8rem;}.widget-title{font-size:21px;font-size:1.4rem;}body,button,input,select,textarea{font-size:15px;font-size:0.9375rem;}.ast-comment-list #cancel-comment-reply-link{font-size:15px;font-size:0.9375rem;}#secondary,#secondary button,#secondary input,#secondary select,#secondary textarea{font-size:15px;font-size:0.9375rem;}.site-title{font-size:20px;font-size:1.25rem;}.ast-archive-description .ast-archive-title{font-size:40px;}.site-header .site-description{font-size:14px;font-size:0.875rem;}.entry-title{font-size:30px;}h1,.entry-content h1{font-size:30px;}h2,.entry-content h2{font-size:24px;}h3,.entry-content h3{font-size:20px;}h4,.entry-content h4{font-size:19px;font-size:1.1875rem;}h5,.entry-content h5{font-size:16px;font-size:1rem;}h6,.entry-content h6{font-size:15px;font-size:0.9375rem;}.ast-single-post .entry-title,.page-title{font-size:30px;}.ast-header-break-point .site-branding img,.ast-header-break-point #masthead .site-logo-img .custom-logo-link img{max-width:100px;}.astra-logo-svg{width:100px;}.ast-header-break-point .site-logo-img .custom-mobile-logo-link img{max-width:100px;}}@media (max-width:768px){html{font-size:91.2%;}}@media (max-width:544px){html{font-size:100%;}}@media (min-width:769px){.ast-container{max-width:1240px;}}@font-face {font-family: 'Astra';src: url( http://windsorempire.com/wp-content/themes/astra/assets/fonts/astra.woff) format('woff'),url( http://windsorempire.com/wp-content/themes/astra/assets/fonts/astra.ttf) format('truetype'),url( http://windsorempire.com/wp-content/themes/astra/assets/fonts/astra.svg#astra) format('svg');font-weight: normal;font-style: normal;font-display: fallback;}@media (max-width:921px) {.main-header-bar .main-header-bar-navigation{display:none;}}.ast-desktop .main-header-menu.submenu-with-border .sub-menu,.ast-desktop .main-header-menu.submenu-with-border .children,.ast-desktop .main-header-menu.submenu-with-border .astra-full-megamenu-wrapper{border-color:#fb2056;}.ast-desktop .main-header-menu.submenu-with-border .sub-menu,.ast-desktop .main-header-menu.submenu-with-border .children{border-top-width:2px;border-right-width:0px;border-left-width:0px;border-bottom-width:0px;border-style:solid;}.ast-desktop .main-header-menu.submenu-with-border .sub-menu .sub-menu,.ast-desktop .main-header-menu.submenu-with-border .children .children{top:-2px;}.ast-desktop .main-header-menu.submenu-with-border .sub-menu a,.ast-desktop .main-header-menu.submenu-with-border .children a{border-bottom-width:0px;border-style:solid;border-color:#eaeaea;}@media (min-width:769px){.main-header-menu .sub-menu li.ast-left-align-sub-menu:hover > ul,.main-header-menu .sub-menu li.ast-left-align-sub-menu.focus > ul{margin-left:-0px;}}.ast-small-footer{border-top-style:solid;border-top-width:0;border-top-color:#7a7a7a;}.ast-small-footer-wrap{text-align:center;}@media (max-width:920px){.ast-404-layout-1 .ast-404-text{font-size:100px;font-size:6.25rem;}}
+.ast-header-break-point .site-header{border-bottom-width:0;}@media (min-width:769px){.main-header-bar{border-bottom-width:0;}}.main-header-menu .menu-item, .main-header-bar .ast-masthead-custom-menu-items{-js-display:flex;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column;}.main-header-menu > .menu-item > a{height:100%;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;-js-display:flex;display:flex;}.ast-primary-menu-disabled .main-header-bar .ast-masthead-custom-menu-items{flex:unset;}
+@media (min-width:769px){.ast-theme-transparent-header #masthead{position:absolute;left:0;right:0;}.ast-theme-transparent-header .main-header-bar, .ast-theme-transparent-header.ast-header-break-point .main-header-bar{background:none;}body.elementor-editor-active.ast-theme-transparent-header #masthead, .fl-builder-edit .ast-theme-transparent-header #masthead, body.vc_editor.ast-theme-transparent-header #masthead{z-index:0;}.ast-header-break-point.ast-replace-site-logo-transparent.ast-theme-transparent-header .custom-mobile-logo-link{display:none;}.ast-header-break-point.ast-replace-site-logo-transparent.ast-theme-transparent-header .transparent-custom-logo{display:inline-block;}.ast-theme-transparent-header .ast-above-header{background-image:none;background-color:transparent;}.ast-theme-transparent-header .ast-below-header{background-image:none;background-color:transparent;}}.ast-theme-transparent-header .main-header-bar, .ast-theme-transparent-header.ast-header-break-point .main-header-menu, .ast-theme-transparent-header.ast-header-break-point .main-header-bar{background-color:rgba(249,154,211,0.42);}.ast-theme-transparent-header .main-header-bar .ast-search-menu-icon form{background-color:rgba(249,154,211,0.42);}.ast-theme-transparent-header .ast-above-header, .ast-theme-transparent-header .ast-below-header{background-color:rgba(249,154,211,0.42);}.ast-theme-transparent-header .site-title a, .ast-theme-transparent-header .site-title a:focus, .ast-theme-transparent-header .site-title a:hover, .ast-theme-transparent-header .site-title a:visited{color:#ffffff;}.ast-theme-transparent-header .site-header .site-title a:hover{color:#f99ab4;}.ast-theme-transparent-header .site-header .site-description{color:#ffffff;}.ast-theme-transparent-header .main-header-menu, .ast-theme-transparent-header.ast-header-break-point .main-header-menu{background-color:rgba(12,12,12,0);}.ast-theme-transparent-header .main-header-menu ul.sub-menu{background-color:rgba(206,95,176,0.8);}.ast-theme-transparent-header .main-header-menu, .ast-theme-transparent-header .main-header-menu a, .ast-theme-transparent-header .ast-masthead-custom-menu-items, .ast-theme-transparent-header .ast-masthead-custom-menu-items a,.ast-theme-transparent-header .main-header-menu li > .ast-menu-toggle, .ast-theme-transparent-header .main-header-menu li > .ast-menu-toggle{color:#ffffff;}.ast-theme-transparent-header .main-header-menu li:hover > a, .ast-theme-transparent-header .main-header-menu li:hover > .ast-menu-toggle, .ast-theme-transparent-header .main-header-menu .ast-masthead-custom-menu-items a:hover, .ast-theme-transparent-header .main-header-menu .focus > a, .ast-theme-transparent-header .main-header-menu .focus > .ast-menu-toggle, .ast-theme-transparent-header .main-header-menu .current-menu-item > a, .ast-theme-transparent-header .main-header-menu .current-menu-ancestor > a, .ast-theme-transparent-header .main-header-menu .current_page_item > a, .ast-theme-transparent-header .main-header-menu .current-menu-item > .ast-menu-toggle, .ast-theme-transparent-header .main-header-menu .current-menu-ancestor > .ast-menu-toggle, .ast-theme-transparent-header .main-header-menu .current_page_item > .ast-menu-toggle{color:rgba(249,184,223,0.69);}@media (max-width:768px){.ast-theme-transparent-header #masthead{position:absolute;left:0;right:0;}.ast-theme-transparent-header .main-header-bar, .ast-theme-transparent-header.ast-header-break-point .main-header-bar{background:none;}body.elementor-editor-active.ast-theme-transparent-header #masthead, .fl-builder-edit .ast-theme-transparent-header #masthead, body.vc_editor.ast-theme-transparent-header #masthead{z-index:0;}.ast-header-break-point.ast-replace-site-logo-transparent.ast-theme-transparent-header .custom-mobile-logo-link{display:none;}.ast-header-break-point.ast-replace-site-logo-transparent.ast-theme-transparent-header .transparent-custom-logo{display:inline-block;}.ast-theme-transparent-header .ast-above-header{background-image:none;background-color:transparent;}.ast-theme-transparent-header .ast-below-header{background-image:none;background-color:transparent;}}@media (max-width:768px){.ast-theme-transparent-header .site-title a, .ast-theme-transparent-header .site-title a:focus, .ast-theme-transparent-header .site-title a:hover, .ast-theme-transparent-header .site-title a:visited{color:#ffffff;}.ast-theme-transparent-header .site-header .site-description{color:#ffffff;}.ast-theme-transparent-header .main-header-menu, .ast-theme-transparent-header .main-header-menu a, .ast-theme-transparent-header .ast-masthead-custom-menu-items, .ast-theme-transparent-header .ast-masthead-custom-menu-items a,.ast-theme-transparent-header .main-header-menu li > .ast-menu-toggle, .ast-theme-transparent-header .main-header-menu li > .ast-menu-toggle{color:#fb2056;}.ast-theme-transparent-header .main-header-menu li:hover > a, .ast-theme-transparent-header .main-header-menu li:hover > .ast-menu-toggle, .ast-theme-transparent-header .main-header-menu .ast-masthead-custom-menu-items a:hover, .ast-theme-transparent-header .main-header-menu .focus > a, .ast-theme-transparent-header .main-header-menu .focus > .ast-menu-toggle, .ast-theme-transparent-header .main-header-menu .current-menu-item > a, .ast-theme-transparent-header .main-header-menu .current-menu-ancestor > a, .ast-theme-transparent-header .main-header-menu .current_page_item > a, .ast-theme-transparent-header .main-header-menu .current-menu-item > .ast-menu-toggle, .ast-theme-transparent-header .main-header-menu .current-menu-ancestor > .ast-menu-toggle, .ast-theme-transparent-header .main-header-menu .current_page_item > .ast-menu-toggle{color:#000000;}}@media (max-width:544px){.ast-theme-transparent-header .main-header-menu, .ast-theme-transparent-header .main-header-menu a, .ast-theme-transparent-header .ast-masthead-custom-menu-items, .ast-theme-transparent-header .ast-masthead-custom-menu-items a,.ast-theme-transparent-header .main-header-menu li > .ast-menu-toggle, .ast-theme-transparent-header .main-header-menu li > .ast-menu-toggle{color:#fb2056;}.ast-theme-transparent-header .main-header-menu li:hover > a, .ast-theme-transparent-header .main-header-menu li:hover > .ast-menu-toggle, .ast-theme-transparent-header .main-header-menu .ast-masthead-custom-menu-items a:hover, .ast-theme-transparent-header .main-header-menu .focus > a, .ast-theme-transparent-header .main-header-menu .focus > .ast-menu-toggle, .ast-theme-transparent-header .main-header-menu .current-menu-item > a, .ast-theme-transparent-header .main-header-menu .current-menu-ancestor > a, .ast-theme-transparent-header .main-header-menu .current_page_item > a, .ast-theme-transparent-header .main-header-menu .current-menu-item > .ast-menu-toggle, .ast-theme-transparent-header .main-header-menu .current-menu-ancestor > .ast-menu-toggle, .ast-theme-transparent-header .main-header-menu .current_page_item > .ast-menu-toggle{color:#000000;}}.ast-theme-transparent-header .main-header-bar, .ast-theme-transparent-header .site-header{border-bottom-width:0;border-bottom-color:#ffffff;}
+.ast-breadcrumbs .trail-browse, .ast-breadcrumbs .trail-items, .ast-breadcrumbs .trail-items li{display:inline-block;margin:0;padding:0;border:none;background:inherit;text-indent:0;}.ast-breadcrumbs .trail-browse{font-size:inherit;font-style:inherit;font-weight:inherit;color:inherit;}.ast-breadcrumbs .trail-items{list-style:none;}.trail-items li::after{padding:0 0.3em;content:'»';}.trail-items li:last-of-type::after{display:none;}
+</style>
+<link rel='stylesheet' id='astra-google-fonts-css' href='//fonts.googleapis.com/css?family=Noto+Sans%3A400%2C700%7CMontserrat%3A700%2C&amp;display=fallback&amp;ver=1.8.5' type='text/css' media='all'>
+<link rel='stylesheet' id='astra-menu-animation-css' href='/CablevisionPowerAdpater/dependencies/index/menu-animation.min.css?ver=1.8.5' type='text/css' media='all'>
+<link rel='stylesheet' id='wp-block-library-css' href='/CablevisionPowerAdpater/dependencies/index/style.min.css?ver=5.1.1' type='text/css' media='all'>
+<!--[if IE]>
+<script type='text/javascript' src='/CablevisionPowerAdpater/dependencies/index/flexibility.min.js?ver=1.8.5'></script>
 <script type='text/javascript'>
 flexibility(document.documentElement);
 </script>
 <![endif]-->
-    <script type='text/javascript' src='http://windsorempire.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
-    <script type='text/javascript' src='http://windsorempire.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
-    <link rel='https://api.w.org/' href='http://windsorempire.com/wp-json/' />
-    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://windsorempire.com/xmlrpc.php?rsd" />
-    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://windsorempire.com/wp-includes/wlwmanifest.xml" />
-    <meta name="generator" content="WordPress 5.1.1" />
-    <link rel="canonical" href="http://windsorempire.com/blog/" />
-    <link rel='shortlink' href='http://windsorempire.com/?p=273' />
-    <link rel="alternate" type="application/json+oembed" href="http://windsorempire.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwindsorempire.com%2Fblog%2F" />
-    <link rel="alternate" type="text/xml+oembed" href="http://windsorempire.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwindsorempire.com%2Fblog%2F&#038;format=xml" />
-    <style type="text/css">
-        .recentcomments a {
-            display: inline !important;
-            padding: 0 !important;
-            margin: 0 !important;
-        }
-    </style>
-    <style type="text/css" media="print">
-        #wpadminbar {
-            display: none;
-        }
-    </style>
-    <style type="text/css" media="screen">
-        html {
-            margin-top: 32px !important;
-        }
-        
-        * html body {
-            margin-top: 32px !important;
-        }
-        
-        @media screen and ( max-width: 782px) {
-            html {
-                margin-top: 46px !important;
-            }
-            * html body {
-                margin-top: 46px !important;
-            }
-        }
-    </style>
-</head>
+<link rel='https://api.w.org/' href='/CablevisionPowerAdpater/dependencies/index/'>
+<link rel='EditURI' type='application/rsd+xml' title='RSD' href='http://windsorempire.com/xmlrpc.php?rsd'>
+<link rel='wlwmanifest' type='application/wlwmanifest+xml' href='/CablevisionPowerAdpater/dependencies/index/wlwmanifest.xml'>
+<meta name='generator' content='WordPress 5.1.1'>
+<link rel='canonical' href='/CablevisionPowerAdpater/dependencies/index/'>
+<link rel='shortlink' href='http://windsorempire.com/?p=273'>
+<link rel='alternate' type='application/json+oembed' href='/CablevisionPowerAdpater/dependencies/index/embed?url=http%3A%2F%2Fwindsorempire.com%2Fblog%2F'>
+<link rel='alternate' type='text/xml+oembed' href='/CablevisionPowerAdpater/dependencies/index/embed?url=http%3A%2F%2Fwindsorempire.com%2Fblog%2F&amp;format=xml'>
+		<style type='text/css'>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		</head>
 
-<body itemtype='https://schema.org/WebPage' itemscope='itemscope' class="page-template-default page page-id-273 logged-in admin-bar no-customize-support wp-custom-logo ast-desktop ast-page-builder-template ast-no-sidebar astra-1.8.5 ast-header-custom-item-inside ast-single-post ast-inherit-site-logo-transparent ast-theme-transparent-header elementor-default">
+<body itemtype='https://schema.org/WebPage' itemscope='itemscope' class='page-template-default page page-id-273 wp-custom-logo ast-page-builder-template ast-no-sidebar astra-1.8.5 ast-header-custom-item-inside ast-single-post ast-inherit-site-logo-transparent ast-theme-transparent-header elementor-default ast-header-break-point' style=''>
 
-    <div id="page" class="hfeed site">
-        <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+<div id='page' class='hfeed site'>
+	<a class='skip-link screen-reader-text' href='#content'>Skip to content</a>
 
-        <header itemtype="https://schema.org/WPHeader" itemscope="itemscope" id="masthead" class="site-header ast-primary-submenu-animation-fade header-main-layout-1 ast-primary-menu-enabled ast-menu-toggle-icon ast-mobile-header-inline" role="banner">
+	
+	
+		<header itemtype='https://schema.org/WPHeader' itemscope='itemscope' id='masthead' class='site-header ast-primary-submenu-animation-fade header-main-layout-1 ast-primary-menu-enabled ast-menu-toggle-icon ast-mobile-header-inline' role='banner'>
 
-            <div class="main-header-bar-wrap">
-                <div class="main-header-bar">
-                    <div class="ast-container">
+			
+			
+<div class='main-header-bar-wrap'>
+	<div class='main-header-bar'>
+				<div class='ast-container'>
 
-                        <div class="ast-flex main-header-container">
-
-                            <div class="site-branding">
-                                <div class="ast-site-identity" itemscope="itemscope" itemtype="https://schema.org/Organization">
-                                    <span class="site-logo-img"><a href="http://windsorempire.com/" class="custom-logo-link" rel="home" itemprop="url"><img width="102" height="61" src="http://windsorempire.com/wp-content/uploads/2019/06/cropped-IMG-1475-2-102x61.jpg" class="custom-logo" alt="windsorempire" itemprop="logo" srcset="http://windsorempire.com/wp-content/uploads/2019/06/cropped-IMG-1475-2-102x61.jpg 102w, http://windsorempire.com/wp-content/uploads/2019/06/cropped-IMG-1475-2-300x179.jpg 300w, http://windsorempire.com/wp-content/uploads/2019/06/cropped-IMG-1475-2-768x458.jpg 768w, http://windsorempire.com/wp-content/uploads/2019/06/cropped-IMG-1475-2-1024x610.jpg 1024w, http://windsorempire.com/wp-content/uploads/2019/06/cropped-IMG-1475-2.jpg 1242w" sizes="(max-width: 102px) 100vw, 102px" /></a></span>
-                                    <div class="ast-site-title-wrap">
-                                        <span class="site-title" itemprop="name">
-					<a href="http://windsorempire.com/" rel="home" itemprop="url" >
+			<div class='ast-flex main-header-container'>
+				
+		<div class='site-branding'>
+			<div class='ast-site-identity' itemscope='itemscope' itemtype='https://schema.org/Organization'>
+				<span class='site-logo-img'><a href='http://windsorempire.com/' class='custom-logo-link' rel='home' itemprop='url'><img width='102' height='61' src='/CablevisionPowerAdpater/dependencies/index/cropped-IMG-1475-2-102x61.jpg' class='custom-logo' alt='windsorempire' itemprop='logo' srcset='/CablevisionPowerAdpater/dependencies/index/cropped-IMG-1475-2.jpg 1242w' sizes='(max-width: 102px) 100vw, 102px'></a></span><div class='ast-site-title-wrap'>
+							<span class='site-title' itemprop='name'>
+					<a href='http://windsorempire.com/' rel='home' itemprop='url'>
 						windsorempire
 					</a>
 				</span>
-                                        <p class="site-description" itemprop="description">
-                                            Caribbean &amp; Japanese Cuisine
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+							<p class='site-description' itemprop='description'>
+					Caribbean &amp; Japanese Cuisine
+				</p>
+						</div>			</div>
+		</div>
 
-                            <!-- .site-branding -->
-                            <div class="ast-mobile-menu-buttons">
+		<!-- .site-branding -->
+				<div class='ast-mobile-menu-buttons'>
 
-                                <div class="ast-button-wrap">
-                                    <button type="button" class="menu-toggle main-header-menu-toggle  ast-mobile-menu-buttons-fill " aria-controls='primary-menu' aria-expanded='false'>
-                                        <span class="screen-reader-text">Main Menu</span>
-                                        <span class="menu-toggle-icon"></span>
-                                    </button>
-                                </div>
+			
+					<div class='ast-button-wrap'>
+			<button type='button' class='menu-toggle main-header-menu-toggle ast-mobile-menu-buttons-fill' aria-controls='primary-menu' aria-expanded='false' data-index='0'>
+				<span class='screen-reader-text'>Main Menu</span>
+				<span class='menu-toggle-icon'></span>
+							</button>
+		</div>
+			
+			
+		</div>
+			<div class='ast-main-header-bar-alignment'><div class='main-header-bar-navigation'><nav itemtype='https://schema.org/SiteNavigationElement' itemscope='itemscope' id='site-navigation' class='ast-flex-grow-1 navigation-accessibility' role='navigation' aria-label='Site Navigation'><div class='main-navigation'><ul id='primary-menu' class='main-header-menu ast-nav-menu ast-flex ast-justify-content-flex-end  submenu-with-border astra-menu-animation-fade ' aria-expanded='false'><li id='menu-item-509' class='menu-item menu-item-type-post_type menu-item-object-page menu-item-509'><a href='/CablevisionPowerAdpater/dependencies/index/'>Home</a></li>
+<li id='menu-item-508' class='menu-item menu-item-type-post_type menu-item-object-page menu-item-508'><a href='/CablevisionPowerAdpater/dependencies/index/'>About</a></li>
+<li id='menu-item-507' class='menu-item menu-item-type-post_type menu-item-object-page menu-item-507'><a href='/CablevisionPowerAdpater/dependencies/index/'>Services</a></li>
+<li id='menu-item-506' class='menu-item menu-item-type-post_type menu-item-object-page menu-item-506'><a href='/CablevisionPowerAdpater/dependencies/index/'>Projects</a></li>
+<li id='menu-item-310' class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-273 current_page_item menu-item-310'><a href='/CablevisionPowerAdpater/dependencies/index/' aria-current='page'>Blog</a></li>
+<li id='menu-item-150' class='menu-item menu-item-type-post_type menu-item-object-page menu-item-150'><a href='/CablevisionPowerAdpater/dependencies/index/'>Contact</a></li>
+			<li class='ast-masthead-custom-menu-items button-custom-menu-item'>
+				<a class='ast-custom-button-link' href='#'><button class='ast-custom-button'>Take Action</button></a><a class='menu-link' href='#'>Take Action</a>			</li>
+			</ul></div></nav></div></div>			</div><!-- Main Header Container -->
+		</div><!-- ast-row -->
+			</div> <!-- Main Header Bar -->
+</div> <!-- Main Header Bar Wrap -->
 
-                            </div>
-                            <div class="ast-main-header-bar-alignment">
-                                <div class="main-header-bar-navigation">
-                                    <nav itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope" id="site-navigation" class="ast-flex-grow-1 navigation-accessibility" role="navigation" aria-label="Site Navigation">
-                                        <div class="main-navigation">
-                                            <ul id="primary-menu" class="main-header-menu ast-nav-menu ast-flex ast-justify-content-flex-end  submenu-with-border astra-menu-animation-fade ">
-                                                <li id="menu-item-509" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-509"><a href="http://windsorempire.com/home-2/">Home</a></li>
-                                                <li id="menu-item-508" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-508"><a href="http://windsorempire.com/about/">About</a></li>
-                                                <li id="menu-item-507" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-507"><a href="http://windsorempire.com/services/">Services</a></li>
-                                                <li id="menu-item-506" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-506"><a href="http://windsorempire.com/projects/">Projects</a></li>
-                                                <li id="menu-item-310" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-273 current_page_item menu-item-310"><a href="http://windsorempire.com/blog/" aria-current="page">Blog</a></li>
-                                                <li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a href="http://windsorempire.com/contact/">Contact</a></li>
-                                                <li class="ast-masthead-custom-menu-items button-custom-menu-item">
-                                                    <a class="ast-custom-button-link" href="#">
-                                                        <button class=ast-custom-button>Take Action</button>
-                                                    </a><a class="menu-link" href="#">Take Action</a> </li>
-                                            </ul>
-                                        </div>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Main Header Container -->
-                    </div>
-                    <!-- ast-row -->
-                </div>
-                <!-- Main Header Bar -->
-            </div>
-            <!-- Main Header Bar Wrap -->
+			
+		</header><!-- #masthead -->
 
-        </header>
-        <!-- #masthead -->
+		
+	
+	
+	<div id='content' class='site-content'>
 
-        <div id="content" class="site-content">
+		<div class='ast-container'>
 
-            <div class="ast-container">
+		
 
-                <div id="primary" class="content-area primary">
+	<div id='primary' class='content-area primary'>
 
-                    <main id="main" class="site-main" role="main">
+		
+					<main id='main' class='site-main' role='main'>
 
-                        <article itemtype="https://schema.org/CreativeWork" itemscope="itemscope" id="post-273" class="post-273 page type-page status-publish ast-article-single">
+				
+					
+					
 
-                            <header class="entry-header ast-header-without-markup">
+<article itemtype='https://schema.org/CreativeWork' itemscope='itemscope' id='post-273' class='post-273 page type-page status-publish ast-article-single'>
 
-                            </header>
-                            <!-- .entry-header -->
+	
+	<header class='entry-header ast-header-without-markup'>
 
-                            <div class="entry-content clear" itemprop="text">
+		
+			</header><!-- .entry-header -->
 
-                                <section class="wp-block-uagb-section uagb-section__wrap uagb-section__background-image" id="uagb-section-df9481a9-23e6-4b38-a422-fcc5a702bca9">
-                                    <div class="uagb-section__overlay"></div>
-                                    <div class="uagb-section__inner-wrap">
-                                        <div class="wp-block-uagb-advanced-heading" id="uagb-adv-heading-70badbf3-f6c5-4a6c-a751-01ea589b0fd7">
-                                            <h1 class="uagb-heading-text">BLOG</h1>
-                                            <p class="uagb-desc-text"></p>
-                                        </div>
-                                    </div>
-                                </section>
+	<div class='entry-content clear' itemprop='text'>
 
-                                <section class="wp-block-uagb-section uagb-section__wrap uagb-section__background-color" id="uagb-section-91cabc1b-c220-4c6d-8ca1-91ac6b2c6761">
-                                    <div class="uagb-section__overlay"></div>
-                                    <div class="uagb-section__inner-wrap"></div>
-                                </section>
+		
+		
+<section class='wp-block-uagb-section uagb-section__wrap uagb-section__background-image' id='uagb-section-df9481a9-23e6-4b38-a422-fcc5a702bca9'><div class='uagb-section__overlay'></div><div class='uagb-section__inner-wrap'>
+<div class='wp-block-uagb-advanced-heading' id='uagb-adv-heading-70badbf3-f6c5-4a6c-a751-01ea589b0fd7'><h1 class='uagb-heading-text'>BLOG</h1><p class='uagb-desc-text'></p></div>
+</div></section>
 
-                                <section class="wp-block-uagb-section uagb-section__wrap uagb-section__background-color" id="uagb-section-ca1a5fcb-e56f-4a24-aa9f-94fbfd3f5c31">
-                                    <div class="uagb-section__overlay"></div>
-                                    <div class="uagb-section__inner-wrap">
 
-                                        <p></p>
-                                    </div>
-                                </section>
 
-                            </div>
-                            <!-- .entry-content .clear -->
+<section class='wp-block-uagb-section uagb-section__wrap uagb-section__background-color' id='uagb-section-91cabc1b-c220-4c6d-8ca1-91ac6b2c6761'><div class='uagb-section__overlay'></div><div class='uagb-section__inner-wrap'></div></section>
 
-                        </article>
-                        <!-- #post-## -->
 
-                    </main>
-                    <!-- #main -->
 
-                </div>
-                <!-- #primary -->
+<section class='wp-block-uagb-section uagb-section__wrap uagb-section__background-color' id='uagb-section-ca1a5fcb-e56f-4a24-aa9f-94fbfd3f5c31'><div class='uagb-section__overlay'></div><div class='uagb-section__inner-wrap'>
 
-            </div>
-            <!-- ast-container -->
 
-        </div>
-        <!-- #content -->
+<p></p>
+</div></section>
 
-        <footer itemtype="https://schema.org/WPFooter" itemscope="itemscope" id="colophon" class="site-footer" role="contentinfo">
+		
+		
+	</div><!-- .entry-content .clear -->
 
-            <div class="ast-small-footer footer-sml-layout-1">
-                <div class="ast-footer-overlay">
-                    <div class="ast-container">
-                        <div class="ast-small-footer-wrap">
-                            <div class="ast-small-footer-section ast-small-footer-section-1">
-                                123 Fifth Avenue, NY 10160, New York, USA | Phone: 800-123-456 | Email: contact@example.com </div>
+	
+	
+</article><!-- #post-## -->
 
-                            <div class="ast-small-footer-section ast-small-footer-section-2">
-                                Copyright © 2019 Loui ReDD </div>
 
-                        </div>
-                        <!-- .ast-row .ast-small-footer-wrap -->
-                    </div>
-                    <!-- .ast-container -->
-                </div>
-                <!-- .ast-footer-overlay -->
-            </div>
-            <!-- .ast-small-footer-->
+					
+					
+				
+			</main><!-- #main -->
+			
+		
+	</div><!-- #primary -->
 
-        </footer>
-        <!-- #colophon -->
 
-    </div>
-    <!-- #page -->
+			
+			</div> <!-- ast-container -->
 
-    <script type="text/template" id="tmpl-elementor-templates-modal__header">
-        <div class="elementor-templates-modal__header__logo-area"></div>
-        <div class="elementor-templates-modal__header__menu-area"></div>
-        <div class="elementor-templates-modal__header__items-area">
-            <# if ( closeType ) { #>
-                <div class="elementor-templates-modal__header__close elementor-templates-modal__header__close--{{{ closeType }}} elementor-templates-modal__header__item">
-                    <# if ( 'skip'===c loseType ) { #>
-                        <span>Skip</span>
-                        <# } #>
-                            <i class="eicon-close" aria-hidden="true" title="Close"></i>
-                            <span class="elementor-screen-only">Close</span>
-                </div>
-                <# } #>
-                    <div id="elementor-template-library-header-tools"></div>
-        </div>
-    </script>
+		</div><!-- #content -->
 
-    <script type="text/template" id="tmpl-elementor-templates-modal__header__logo">
-        <span class="elementor-templates-modal__header__logo__icon-wrapper">
-		<i class="eicon-elementor"></i>
-	</span>
-        <span class="elementor-templates-modal__header__logo__title">{{{ title }}}</span>
-    </script>
-    <script type="text/template" id="tmpl-elementor-finder">
-        <div id="elementor-finder__search">
-            <i class="eicon-search"></i>
-            <input id="elementor-finder__search__input" placeholder="Type to find anything in Elementor">
-        </div>
-        <div id="elementor-finder__content"></div>
-    </script>
+		
+		
+		
+		<footer itemtype='https://schema.org/WPFooter' itemscope='itemscope' id='colophon' class='site-footer' role='contentinfo'>
 
-    <script type="text/template" id="tmpl-elementor-finder-results-container">
-        <div id="elementor-finder__no-results">No Results Found</div>
-        <div id="elementor-finder__results"></div>
-    </script>
+			
+			
+<div class='ast-small-footer footer-sml-layout-1'>
+	<div class='ast-footer-overlay'>
+		<div class='ast-container'>
+			<div class='ast-small-footer-wrap'>
+									<div class='ast-small-footer-section ast-small-footer-section-1'>
+						123 Fifth Avenue, NY 10160, New York, USA  |  Phone: 800-123-456  |  Email: contact@example.com					</div>
+				
+									<div class='ast-small-footer-section ast-small-footer-section-2'>
+						Copyright © 2019 Loui ReDD					</div>
+				
+			</div><!-- .ast-row .ast-small-footer-wrap -->
+		</div><!-- .ast-container -->
+	</div><!-- .ast-footer-overlay -->
+</div><!-- .ast-small-footer-->
 
-    <script type="text/template" id="tmpl-elementor-finder__results__category">
-        <div class="elementor-finder__results__category__title">{{{ title }}}</div>
-        <div class="elementor-finder__results__category__items"></div>
-    </script>
+			
+		</footer><!-- #colophon -->
+		
+		
+	</div><!-- #page -->
 
-    <script type="text/template" id="tmpl-elementor-finder__results__item">
-        <a href="{{ url }}" class="elementor-finder__results__item__link">
-            <div class="elementor-finder__results__item__icon">
-                <i class="eicon-{{{ icon }}}"></i>
-            </div>
-            <div class="elementor-finder__results__item__title">{{{ title }}}</div>
-            <# if ( description ) { #>
-                <div class="elementor-finder__results__item__description">- {{{ description }}}</div>
-                <# } #>
-        </a>
-        <# if ( actions.length ) { #>
-            <div class="elementor-finder__results__item__actions">
-                <# jQuery.each( actions, function() { #>
-                    <a class="elementor-finder__results__item__action elementor-finder__results__item__action--{{ this.name }}" href="{{ this.url }}" target="_blank">
-                        <i class="eicon-{{{ this.icon }}}"></i>
-                    </a>
-                    <# } ); #>
-            </div>
-            <# } #>
-    </script>
-    <script type='text/javascript' src='http://windsorempire.com/wp-includes/js/admin-bar.min.js?ver=5.1.1'></script>
-    <script type='text/javascript'>
-        /* <![CDATA[ */
-        var astra = {
-            "break_point": "921",
-            "isRtl": ""
-        };
-        /* ]]> */
-    </script>
-    <script type='text/javascript' src='http://windsorempire.com/wp-content/themes/astra/assets/js/minified/style.min.js?ver=1.8.5'></script>
-    <script type='text/javascript' src='http://windsorempire.com/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
-    <script type='text/javascript' src='http://windsorempire.com/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
-    <script type='text/javascript' src='http://windsorempire.com/wp-includes/js/jquery/ui/mouse.min.js?ver=1.11.4'></script>
-    <script type='text/javascript' src='http://windsorempire.com/wp-includes/js/jquery/ui/draggable.min.js?ver=1.11.4'></script>
-    <script type='text/javascript' src='http://windsorempire.com/wp-includes/js/underscore.min.js?ver=1.8.3'></script>
-    <script type='text/javascript' src='http://windsorempire.com/wp-includes/js/backbone.min.js?ver=1.2.3'></script>
-    <script type='text/javascript' src='http://windsorempire.com/wp-content/plugins/elementor/assets/lib/backbone/backbone.marionette.min.js?ver=2.4.5'></script>
-    <script type='text/javascript' src='http://windsorempire.com/wp-content/plugins/elementor/assets/lib/backbone/backbone.radio.min.js?ver=1.0.4'></script>
-    <script type='text/javascript' src='http://windsorempire.com/wp-content/plugins/elementor/assets/js/common-modules.min.js?ver=2.5.16'></script>
-    <script type='text/javascript' src='http://windsorempire.com/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4'></script>
-    <script type='text/javascript' src='http://windsorempire.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.7.1'></script>
-    <script type='text/javascript'>
-        var elementorCommonConfig = {
-            "version": "2.5.16",
-            "isRTL": false,
-            "activeModules": ["ajax", "finder", "connect"],
-            "urls": {
-                "assets": "http:\/\/windsorempire.com\/wp-content\/plugins\/elementor\/assets\/"
-            },
-            "ajax": {
-                "url": "http:\/\/windsorempire.com\/wp-admin\/admin-ajax.php",
-                "nonce": "5cfcce6968"
-            },
-            "finder": {
-                "data": {
-                    "edit": {
-                        "title": "Edit",
-                        "dynamic": true,
-                        "name": "edit"
-                    },
-                    "general": {
-                        "title": "General",
-                        "dynamic": false,
-                        "items": {
-                            "saved-templates": {
-                                "title": "Saved Templates",
-                                "icon": "library-save",
-                                "url": "http:\/\/windsorempire.com\/wp-admin\/edit.php?post_type=elementor_library&tabs_group=library",
-                                "keywords": ["template", "section", "page", "library"]
-                            },
-                            "system-info": {
-                                "title": "System Info",
-                                "icon": "info",
-                                "url": "http:\/\/windsorempire.com\/wp-admin\/admin.php?page=elementor-system-info",
-                                "keywords": ["system", "info", "environment", "elementor"]
-                            },
-                            "role-manager": {
-                                "title": "Role Manager",
-                                "icon": "person",
-                                "url": "http:\/\/windsorempire.com\/wp-admin\/admin.php?page=elementor-role-manager",
-                                "keywords": ["role", "manager", "user", "elementor"]
-                            },
-                            "knowledge-base": {
-                                "title": "Knowledge Base",
-                                "url": "http:\/\/windsorempire.com\/wp-admin\/admin.php?page=go_knowledge_base_site",
-                                "keywords": ["help", "knowledge", "docs", "elementor"]
-                            }
-                        },
-                        "name": "general"
-                    },
-                    "create": {
-                        "title": "Create",
-                        "dynamic": false,
-                        "items": {
-                            "post": {
-                                "title": "Add New Post",
-                                "icon": "plus-circle",
-                                "url": "http:\/\/windsorempire.com\/wp-admin\/edit.php?action=elementor_new_post&post_type=post&_wpnonce=1650153539",
-                                "keywords": ["post", "page", "template", "new", "create"]
-                            },
-                            "page": {
-                                "title": "Add New Page",
-                                "icon": "plus-circle",
-                                "url": "http:\/\/windsorempire.com\/wp-admin\/edit.php?action=elementor_new_post&post_type=page&_wpnonce=1650153539",
-                                "keywords": ["post", "page", "template", "new", "create"]
-                            },
-                            "elementor_library": {
-                                "title": "Add New Template",
-                                "icon": "plus-circle",
-                                "url": "http:\/\/windsorempire.com\/wp-admin\/edit.php?post_type=elementor_library#add_new",
-                                "keywords": ["post", "page", "template", "new", "create"]
-                            }
-                        },
-                        "name": "create"
-                    },
-                    "site": {
-                        "title": "Site",
-                        "dynamic": false,
-                        "items": {
-                            "homepage": {
-                                "title": "Homepage",
-                                "url": "http:\/\/windsorempire.com",
-                                "icon": "home-heart",
-                                "keywords": ["home", "page"]
-                            },
-                            "wordpress-dashboard": {
-                                "title": "Dashboard",
-                                "icon": "dashboard",
-                                "url": "http:\/\/windsorempire.com\/wp-admin\/",
-                                "keywords": ["dashboard", "wordpress"]
-                            },
-                            "wordpress-menus": {
-                                "title": "Menus",
-                                "icon": "wordpress",
-                                "url": "http:\/\/windsorempire.com\/wp-admin\/nav-menus.php",
-                                "keywords": ["menu", "wordpress"]
-                            },
-                            "wordpress-themes": {
-                                "title": "Themes",
-                                "icon": "wordpress",
-                                "url": "http:\/\/windsorempire.com\/wp-admin\/themes.php",
-                                "keywords": ["themes", "wordpress"]
-                            },
-                            "wordpress-customizer": {
-                                "title": "Customizer",
-                                "icon": "wordpress",
-                                "url": "http:\/\/windsorempire.com\/wp-admin\/customize.php",
-                                "keywords": ["customizer", "wordpress"]
-                            },
-                            "wordpress-plugins": {
-                                "title": "Plugins",
-                                "icon": "wordpress",
-                                "url": "http:\/\/windsorempire.com\/wp-admin\/plugins.php",
-                                "keywords": ["plugins", "wordpress"]
-                            },
-                            "wordpress-users": {
-                                "title": "Users",
-                                "icon": "wordpress",
-                                "url": "http:\/\/windsorempire.com\/wp-admin\/users.php",
-                                "keywords": ["users", "profile", "wordpress"]
-                            }
-                        },
-                        "name": "site"
-                    },
-                    "settings": {
-                        "title": "Settings",
-                        "dynamic": false,
-                        "items": {
-                            "general-settings": {
-                                "title": "General Settings",
-                                "url": "http:\/\/windsorempire.com\/wp-admin\/admin.php?page=elementor",
-                                "keywords": ["general", "settings", "elementor"]
-                            },
-                            "style": {
-                                "title": "Style",
-                                "url": "http:\/\/windsorempire.com\/wp-admin\/admin.php?page=elementor#tab-style",
-                                "keywords": ["style", "settings", "elementor"]
-                            },
-                            "advanced": {
-                                "title": "Advanced",
-                                "url": "http:\/\/windsorempire.com\/wp-admin\/admin.php?page=elementor#tab-advanced",
-                                "keywords": ["advanced", "settings", "elementor"]
-                            }
-                        },
-                        "name": "settings"
-                    },
-                    "tools": {
-                        "title": "Tools",
-                        "dynamic": false,
-                        "items": {
-                            "tools": {
-                                "title": "Tools",
-                                "icon": "tools",
-                                "url": "http:\/\/windsorempire.com\/wp-admin\/admin.php?page=elementor-tools",
-                                "keywords": ["tools", "regenerate css", "safe mode", "debug bar", "sync library", "elementor"]
-                            },
-                            "replace-url": {
-                                "title": "Replace URL",
-                                "icon": "tools",
-                                "url": "http:\/\/windsorempire.com\/wp-admin\/admin.php?page=elementor-tools#tab-replace_url",
-                                "keywords": ["tools", "replace url", "domain", "elementor"]
-                            },
-                            "version-control": {
-                                "title": "Version Control",
-                                "icon": "time-line",
-                                "url": "http:\/\/windsorempire.com\/wp-admin\/admin.php?page=elementor-tools#tab-versions",
-                                "keywords": ["tools", "version", "control", "rollback", "beta", "elementor"]
-                            },
-                            "maintenance-mode": {
-                                "title": "Maintenance Mode",
-                                "icon": "tools",
-                                "url": "http:\/\/windsorempire.com\/wp-admin\/admin.php?page=elementor-tools#tab-maintenance_mode",
-                                "keywords": ["tools", "maintenance", "coming soon", "elementor"]
-                            }
-                        },
-                        "name": "tools"
-                    }
-                },
-                "i18n": {
-                    "finder": "Finder"
-                }
-            },
-            "connect": []
-        };
-    </script>
-    <script type='text/javascript' src='http://windsorempire.com/wp-content/plugins/elementor/assets/js/common.min.js?ver=2.5.16'></script>
-    <script type='text/javascript' src='http://windsorempire.com/wp-includes/js/wp-embed.min.js?ver=5.1.1'></script>
-    <script>
-        /(trident|msie)/i.test(navigator.userAgent) && document.getElementById && window.addEventListener && window.addEventListener("hashchange", function() {
-            var t, e = location.hash.substring(1);
-            /^[A-z0-9_-]+$/.test(e) && (t = document.getElementById(e)) && (/^(?:a|select|input|button|textarea)$/i.test(t.tagName) || (t.tabIndex = -1), t.focus())
-        }, !1);
-    </script>
-    <!--[if lte IE 8]>
-		<script type="text/javascript">
-			document.body.className = document.body.className.replace( /(^|\s)(no-)?customize-support(?=\s|$)/, '' ) + ' no-customize-support';
-		</script>
-	<![endif]-->
-    <!--[if gte IE 9]><!-->
-    <script type="text/javascript">
-        (function() {
-            var request, b = document.body,
-                c = 'className',
-                cs = 'customize-support',
-                rcs = new RegExp('(^|\\s+)(no-)?' + cs + '(\\s+|$)');
+	
+	<script type='text/javascript'>
+/* <![CDATA[ */
+var astra = {'break_point':'921','isRtl':''};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/CablevisionPowerAdpater/dependencies/index/style.min.js?ver=1.8.5'></script>
+<script type='text/javascript' src='/CablevisionPowerAdpater/dependencies/index/wp-embed.min.js?ver=5.1.1'></script>
+			<script>
+			/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener('hashchange',function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+			</script>
+			
+	
 
-            request = true;
 
-            b[c] = b[c].replace(rcs, ' ');
-            // The customizer requires postMessage and CORS (if the site is cross domain)
-            b[c] += (window.postMessage && request ? ' ' : ' no-') + cs;
-        }());
-    </script>
-    <!--<![endif]-->
-    <div id="wpadminbar" class="nojq nojs">
-        <a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
-        <div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
-            <ul id='wp-admin-bar-root-default' class="ab-top-menu">
-                <li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://windsorempire.com/wp-admin/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a>
-                    <div class="ab-sub-wrapper">
-                        <ul id='wp-admin-bar-wp-logo-default' class="ab-submenu">
-                            <li id='wp-admin-bar-about'><a class='ab-item' href='http://windsorempire.com/wp-admin/about.php'>About WordPress</a></li>
-                        </ul>
-                        <ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu">
-                            <li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li>
-                            <li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li>
-                            <li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support Forums</a></li>
-                            <li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li id='wp-admin-bar-site-name' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://windsorempire.com/wp-admin/'>windsorempire</a>
-                    <div class="ab-sub-wrapper">
-                        <ul id='wp-admin-bar-site-name-default' class="ab-submenu">
-                            <li id='wp-admin-bar-dashboard'><a class='ab-item' href='http://windsorempire.com/wp-admin/'>Dashboard</a></li>
-                        </ul>
-                        <ul id='wp-admin-bar-appearance' class="ab-submenu">
-                            <li id='wp-admin-bar-themes'><a class='ab-item' href='http://windsorempire.com/wp-admin/themes.php'>Themes</a></li>
-                            <li id='wp-admin-bar-widgets'><a class='ab-item' href='http://windsorempire.com/wp-admin/widgets.php'>Widgets</a></li>
-                            <li id='wp-admin-bar-menus'><a class='ab-item' href='http://windsorempire.com/wp-admin/nav-menus.php'>Menus</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li id='wp-admin-bar-customize' class="hide-if-no-customize"><a class='ab-item' href='http://windsorempire.com/wp-admin/customize.php?url=http%3A%2F%2Fwindsorempire.com%2Fblog%2F'>Customize</a></li>
-                <li id='wp-admin-bar-updates'><a class='ab-item' href='http://windsorempire.com/wp-admin/update-core.php' title='4 Plugin Updates, 1 Theme Update'><span class="ab-icon"></span><span class="ab-label">5</span><span class="screen-reader-text">4 Plugin Updates, 1 Theme Update</span></a></li>
-                <li id='wp-admin-bar-comments'><a class='ab-item' href='http://windsorempire.com/wp-admin/edit-comments.php'><span class="ab-icon"></span><span class="ab-label awaiting-mod pending-count count-3" aria-hidden="true">3</span><span class="screen-reader-text">3 comments awaiting moderation</span></a></li>
-                <li id='wp-admin-bar-new-content' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://windsorempire.com/wp-admin/post-new.php'><span class="ab-icon"></span><span class="ab-label">New</span></a>
-                    <div class="ab-sub-wrapper">
-                        <ul id='wp-admin-bar-new-content-default' class="ab-submenu">
-                            <li id='wp-admin-bar-new-post'><a class='ab-item' href='http://windsorempire.com/wp-admin/post-new.php'>Post</a></li>
-                            <li id='wp-admin-bar-new-media'><a class='ab-item' href='http://windsorempire.com/wp-admin/media-new.php'>Media</a></li>
-                            <li id='wp-admin-bar-new-page'><a class='ab-item' href='http://windsorempire.com/wp-admin/post-new.php?post_type=page'>Page</a></li>
-                            <li id='wp-admin-bar-new-elementor_library'><a class='ab-item' href='http://windsorempire.com/wp-admin/post-new.php?post_type=elementor_library'>Template</a></li>
-                            <li id='wp-admin-bar-new-user'><a class='ab-item' href='http://windsorempire.com/wp-admin/user-new.php'>User</a></li>
-                            <li id='wp-admin-bar-wpforms'><a class='ab-item' href='http://windsorempire.com/wp-admin/admin.php?page=wpforms-builder'>WPForms</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li id='wp-admin-bar-edit'><a class='ab-item' href='http://windsorempire.com/wp-admin/post.php?post=273&#038;action=edit'>Edit Page</a></li>
-                <li id='wp-admin-bar-epc_purge_menu' class="menupop">
-                    <div class="ab-item ab-empty-item" aria-haspopup="true">Caching</div>
-                    <div class="ab-sub-wrapper">
-                        <ul id='wp-admin-bar-epc_purge_menu-default' class="ab-submenu">
-                            <li id='wp-admin-bar-epc_purge_menu-purge_all'><a class='ab-item' href='/blog/?epc_purge_all=1'>Purge All</a></li>
-                            <li id='wp-admin-bar-epc_purge_menu-purge_single'><a class='ab-item' href='/blog/?epc_purge_single=1'>Purge This Page</a></li>
-                            <li id='wp-admin-bar-epc_purge_menu-cache_settings'><a class='ab-item' href='http://windsorempire.com/wp-admin/options-general.php#epc_settings'>Cache Settings</a></li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-            <ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu">
-                <li id='wp-admin-bar-search' class="admin-bar-search">
-                    <div class="ab-item ab-empty-item" tabindex="-1">
-                        <form action="http://windsorempire.com/" method="get" id="adminbarsearch">
-                            <input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" />
-                            <label for="adminbar-search" class="screen-reader-text">Search</label>
-                            <input type="submit" class="adminbar-button" value="Search" />
-                        </form>
-                    </div>
-                </li>
-                <li id='wp-admin-bar-my-account' class="menupop with-avatar"><a class='ab-item' aria-haspopup="true" href='http://windsorempire.com/wp-admin/profile.php'>Howdy, <span class="display-name">lea</span><img alt='' src='http://2.gravatar.com/avatar/b95a1a508909182b8c7587fdeb9c546e?s=26&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/b95a1a508909182b8c7587fdeb9c546e?s=52&#038;d=mm&#038;r=g 2x' class='avatar avatar-26 photo' height='26' width='26' /></a>
-                    <div class="ab-sub-wrapper">
-                        <ul id='wp-admin-bar-user-actions' class="ab-submenu">
-                            <li id='wp-admin-bar-user-info'>
-                                <a class='ab-item' tabindex="-1" href='http://windsorempire.com/wp-admin/profile.php'><img alt='' src='http://2.gravatar.com/avatar/b95a1a508909182b8c7587fdeb9c546e?s=64&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/b95a1a508909182b8c7587fdeb9c546e?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' /><span class='display-name'>lea</span><span class='username'>loui</span></a>
-                            </li>
-                            <li id='wp-admin-bar-edit-profile'><a class='ab-item' href='http://windsorempire.com/wp-admin/profile.php'>Edit My Profile</a></li>
-                            <li id='wp-admin-bar-logout'><a class='ab-item' href='http://windsorempire.com/wp-login.php?action=logout&#038;_wpnonce=fae8f234f8'>Log Out</a></li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <a class="screen-reader-shortcut" href="http://windsorempire.com/wp-login.php?action=logout&#038;_wpnonce=fae8f234f8">Log Out</a>
-    </div>
-
-</body>
-
-</html>
+<!--Generated by Endurance Page Cache--></body></head>
