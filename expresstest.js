@@ -57,10 +57,10 @@ function fileMiddleware (req, res, next) {
 
 	
 }
-function errorMiddleware(err,res,req,next){
+function errorMiddleware(err,req,res,next){
     res.end(path.join(__dirname,  '404.html' ))
 }
-function directoryList(res,req,next){
+function directoryList(req,res,next){
     var filesList = ''
     // fs.readdir(__dirname , (err,files) => {
     // 	if (err) throw err
