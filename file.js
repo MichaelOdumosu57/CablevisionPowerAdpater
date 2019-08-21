@@ -1,5 +1,6 @@
 const http = require('http');
 const fs = require('fs');
+const path = require('path')
 const port = process.env.PORT || 3000
 
 
@@ -16,7 +17,7 @@ fs.readdir(__dirname , (err,files) => {
 		files.map((x)=>{
 		    filesList += x
 		})
-		res.end('<h1>'+filesList+'</h1>');
+		res.end(   fs.readFileSync(   path.join(   __dirname,'index.html'   )   )   );
 	}
 })
 
