@@ -1,7 +1,6 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path')
-const url = require('url')
 const port = process.env.PORT || 3000
 
 /* application global variables*/ //{
@@ -21,8 +20,8 @@ const server = http.createServer((req, res) => {
     
 res.statusCode = 200;
 res.setHeader('Content-Type', 'text/html');
-var reqInfo = url.parse(   req.url   )
-res.end('<h1>'+reqInfo.path+'</h1>')
+
+res.end('<h1>'+ req.url +'</h1>')
 // res.end(   fs.readFileSync(   path.join(   __dirname,'index.html'   )   )   );
 /* code that helps see where your files are */ //{
 // var filesList = ''
