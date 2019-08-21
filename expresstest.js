@@ -58,22 +58,22 @@ function fileMiddleware (req, res, next) {
 	
 }
 function errorMiddleware(err,res,req,next){
-    res.endFile(path.join(__dirname,  '404.html' ))
+    res.end(path.join(__dirname,  '404.html' ))
 }
 function directoryList(res,req,next){
     var filesList = ''
-    fs.readdir(__dirname , (err,files) => {
-    	if (err) throw err
+    // fs.readdir(__dirname , (err,files) => {
+    // 	if (err) throw err
     
     
-    	else{
-    		files.map((x)=>{
-    		    filesList += x
-    		})
-            res.send(fileList)
-    	}
-    })
-    // res.sendFile(path.join(__dirname,  '404.html' ))
+    // 	else{
+    // 		files.map((x)=>{
+    // 		    filesList += x
+    // 		})
+    //         res.end(fileList)
+    // 	}
+    // })
+    res.send(__dirname )
 }
 app.get('/',directoryList);
 // app.get('/', function (req, res) {
