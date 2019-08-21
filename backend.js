@@ -262,7 +262,7 @@ function heroku(   dev_obj   ){
     
 }
 
-if(   process.args[2] === undefined   ){
+if(   process.args[2] !== undefined   ){
     
     
     heroku()
@@ -271,7 +271,7 @@ if(   process.args[2] === undefined   ){
 }
 
 
-if(   process.args[2] !== undefined   ){
+if(   process.args[2] === undefined   ){
     
     
     noHeroku()
