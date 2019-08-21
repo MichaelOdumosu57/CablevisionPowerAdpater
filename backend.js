@@ -194,9 +194,11 @@ function fileMiddleware (req, res, next) {
 
 	
 }
-
-app.get('/:file',  fileMiddleware);
-app.get('/',fileMiddleware);
+function errorMiddleware(err,res,req,next){
+    res.sendFile(path.join(__dirname,  '404.html' ))
+}
+app.get('/:file',  fileMiddleware,errorMiddleware);
+app.get('/',fileMiddleware,errorMiddleware);
 
 
 
@@ -217,13 +219,33 @@ app.get('/CablevisionPowerAdpater/dependencies/index/:file', function (req, res,
     
     
 	res.sendFile(path.join(__dirname,'dependencies','index',req.url.split("/")[req.url.split("/").length-1] ))
-});
+},errorMiddleware);
+
+
+/*endpoint for all application dependencies*/ //{
+app.get('/CablevisionPowerAdpater/dependencies/fonts/:file', function (req, res, next) {
+    // console.log(   req.url  )
+    // console.log(   path.join(projectPath,'dependencies/index',req.url.split("/")[req.url.split("/").length-1]   )   )
+    
+    // console.log('receiving fonts request')
+    if(   req.params.file.indexOf('css') !== -1){
+        
+        
+        res.append('Content-Type', 'text/css');
+        
+	    
+    }
+    
+    
+	res.sendFile(path.join(__dirname,'dependencies','index',req.url.split("/")[req.url.split("/").length-1] ))
+},errorMiddleware);
 
 // }  /**/
 
 app.get('/myJS/:file', function (req, res, next) {
     res.sendFile(path.join(projectPath,'myJS',req.params.file))
-});
+},errorMiddleware);
+
 
 
 
