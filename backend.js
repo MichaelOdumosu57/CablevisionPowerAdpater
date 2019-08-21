@@ -11,7 +11,7 @@ const path = require('path')
 const fs = require('fs');
 const compression = require('compression')
 const cors = require('cors')
-const ultraObject = require('./ultraObject.js')
+// const ultraObject = require('./ultraObject.js')
 const http = require("https");
 
 
