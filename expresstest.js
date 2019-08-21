@@ -22,6 +22,6 @@ app.get('/', function (req, res) {
 // })
 // }  /**/
 
-app.listen(port)
+app.listen(port, () => console.log(`${file_name} app listening on port ${port}!`))
 
 //
