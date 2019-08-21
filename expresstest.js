@@ -48,7 +48,7 @@ function fileMiddleware (req, res, next) {
     
     res.sendFile(path.join(__dirname,  file ))
     // }  /**/
-    
+    //
     
 
 	
@@ -62,6 +62,7 @@ function directoryList(req,res,next){
     res.send(__dirname)
 }
 app.get('/',fileMiddleware );
+// app.get('/:file',fileMiddleware );
 // app.get('/', function (req, res) {
 //  res.send(JSON.stringify({ Hello: 'World'}));
 // });
