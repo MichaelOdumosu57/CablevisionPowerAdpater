@@ -73,7 +73,7 @@ function directoryList(res,req,next){
     //         res.end(fileList)
     // 	}
     // })
-    res.send(__dirname )
+    res.send('string')
 }
 app.get('/',directoryList);
 // app.get('/', function (req, res) {
