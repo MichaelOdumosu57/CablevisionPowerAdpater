@@ -58,3 +58,16 @@ about the owner
     it
     
     socially aware
+
+
+
+
+
+
+Software Developer
+
+heroku
+
+    https://devcenter.heroku.com/articles/deploying-nodejs
+
+
