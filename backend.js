@@ -43,10 +43,13 @@ app.set('etag', false)
 
 function fileMiddleware (req, res, next) {
     
+    console.log('got it')
     
+    res.sendFile(path.join(__dirname,"about.html"))
+    return
     /* determining home page*/ //{
     var file = 'index'
-    
+
     
     if(   req.params.file !== undefined   ){
         
@@ -106,6 +109,7 @@ function fileMiddleware (req, res, next) {
                             // ccta.split(/http:\/\/windsorempire.com(?:.+)(\/>|>)/) gets that endingtag
                             // ccta.split(/"http:\/\/windsorempire.com(?:.+)"|'http:\/\/windsorempire.com(?:.+)'/).join('"dependencies/index"')
                             // ccta.match(/'http:\/\/windsorempire.com(?:[^'|"]+(?!"|'))/)
+                            // ccta.split(/'http:\/\/windsorempire.com\/[^']+\//).join("'dependencies/index/") the rege that did it the soultion is here \/[^']+\/, but that should not try to differentate out the file there is no spec for that,
                             r_stream.off('data',a)
                             r_stream.pause()
                             wStream.once('drain',function(){
@@ -234,7 +238,7 @@ app.get('/myJS/:file', function (req, res, next) {
     if(   req.params.file.indexOf('css') !== -1){
         
         
-        // res.append('MIME-type', 'text/css');
+        res.append('MIME-type', 'text/css');
         
 	    
 	    
