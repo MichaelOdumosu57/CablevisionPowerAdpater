@@ -59,7 +59,7 @@ function fileMiddleware (req, res, next) {
     
     res.sendFile(path.join(__dirname,  file ))
     // }  /**/
-    //
+    
     
 
 	
