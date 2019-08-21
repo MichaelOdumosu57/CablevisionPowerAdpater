@@ -3,22 +3,22 @@ const app = express()
 const port = process.env.PORT || 3000
 
 app.get('/', function (req, res) {
- res.send(JSON.stringify({ Hello: ‘World’}));
+ res.send(JSON.stringify({ Hello: 'World'}));
 });
 
 /* code that helps see where your files are */ //{
-var filesList = ''
-fs.readdir(__dirname , (err,files) => {
-	if (err) throw err
+// var filesList = ''
+// fs.readdir(__dirname , (err,files) => {
+// 	if (err) throw err
 
 
-	else{
-		files.map((x)=>{
-		    filesList += x
-		})
-        res.end(fileList)
-	}
-})
+// 	else{
+// 		files.map((x)=>{
+// 		    filesList += x
+// 		})
+//         res.end(fileList)
+// 	}
+// })
 // }  /**/
 
-app.listen(port, () => console.log(`${file_name} app listening on port ${port}!`))
+app.listen(port)
