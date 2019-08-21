@@ -198,7 +198,10 @@ function errorMiddleware(err,res,req,next){
     res.sendFile(path.join(__dirname,  '404.html' ))
 }
 app.get('/:file',  fileMiddleware,errorMiddleware);
-app.get('/',fileMiddleware,errorMiddleware);
+// app.get('/',fileMiddleware,errorMiddleware);
+app.get('/', function (req, res) {
+ res.send(JSON.stringify({ Hello: ‘World’}));
+});
 
 
 
