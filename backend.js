@@ -203,7 +203,7 @@ app.get('/',  fileMiddleware);
 
 
 /*endpoint for all application dependencies*/ //{
-app.get('/dependencies/index/:file', function (req, res, next) {
+app.get('/CablevisionPowerAdpater/dependencies/index/:file', function (req, res, next) {
     // console.log(   req.url  )
     // console.log(   path.join(projectPath,'dependencies/index',req.url.split("/")[req.url.split("/").length-1]   )   )
     

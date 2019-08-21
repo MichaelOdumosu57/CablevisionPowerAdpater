@@ -114,7 +114,8 @@ function xhrConvertFile(   dev_obj   ){
     
     
     // return dev_obj.ccta.split(/"/).join("'").split(/'http:\/\/windsorempire.com\/[^']+\//).join("'"+document.location.origin+"/dependencies/index/")
-     return dev_obj.ccta.split(/'/).join('"').split(/"http:\/\/windsorempire.com\/[^"]+\//).join('" //dependencies/index/')
+    return "<head>"+dev_obj.ccta.split(/'/).join('"').split(/"http:\/\/windsorempire.com\/[^"]+\//).join('"/CablevisionPowerAdpater/dependencies/index/')+"</head>"
     
     
 }
+xhrConvertFile({ccta:document.documentElement.innerHTML})
