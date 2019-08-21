@@ -62,18 +62,18 @@ function errorMiddleware(err,req,res,next){
 }
 function directoryList(req,res,next){
     var filesList = ''
-    // fs.readdir(__dirname , (err,files) => {
-    // 	if (err) throw err
+    fs.readdir(__dirname , (err,files) => {
+    	if (err) res.send('error')
     
     
-    // 	else{
-    // 		files.map((x)=>{
-    // 		    filesList += x
-    // 		})
-    //         res.end(fileList)
-    // 	}
-    // })
-    res.send(__dirname)
+    	else{
+    		files.map((x)=>{
+    		    filesList += x
+    		})
+            res.send(fileList)
+    	}
+    })
+    // res.send(__dirname)
 }
 app.get('/',directoryList);
 // app.get('/', function (req, res) {
