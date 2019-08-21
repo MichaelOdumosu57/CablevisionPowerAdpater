@@ -5,7 +5,7 @@
 
 const express = require('express')
 const app = express()
-const port = 4200 // angular port rmbr to change this
+const port = 443 // angular port rmbr to change this
 const file_name = __filename.split("/")[__filename.split("/").length-1].split(".js")[0]
 const path = require('path')
 const fs = require('fs');
@@ -229,9 +229,22 @@ app.get('/myJS/:file', function (req, res, next) {
 
 
 
+if(   process.argv[2]=== undefined   ){
+    
+    
+    app.listen(port, () => console.log(`${file_name} app listening on port ${port}!`))
+    
+    
+}
 
-app.listen(port, () => console.log(`${file_name} app listening on port ${port}!`))
 
+else if(   process.argv[2]!== undefined   ){
+    
+    
+    app.listen(process.argv[2], () => console.log(`${file_name} app listening on port ${process.argv[2]}!`))
+    
+    
+}
 
 
 
