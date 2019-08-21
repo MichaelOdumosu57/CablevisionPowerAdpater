@@ -39,7 +39,7 @@ if(   req.url.indexOf('/CablevisionPowerAdpater/dependencies/index/') !== -1   )
 }
 // }  /**/
 
-res.end('<h1>'+ req.url +'</h1>')
+res.end('<h1>'+ req.url +'</h1>')//
 // res.end(   fs.readFileSync(   path.join(   __dirname,'index.html'   )   )   );
 /* code that helps see where your files are */ //{
 // var filesList = ''
