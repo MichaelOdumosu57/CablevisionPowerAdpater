@@ -74,14 +74,26 @@ function directoryList(req,res,next){
 }
 app.get('/',fileMiddleware,errorMiddleware );
 app.get('/:file',fileMiddleware,errorMiddleware )
+app.get('/CablevisionPowerAdpater/dependencies/index/:file', function (req, res, next) {
+    // console.log(   req.url  )
+    // console.log(   path.join(projectPath,'dependencies/index',req.url.split("/")[req.url.split("/").length-1]   )   )
+    
+    if(   req.params.file.indexOf('css') !== -1){
+        
+        
+        res.append('Content-Type', 'text/css');
+        
+	    
+    }
+    
+    
+	res.sendFile(path.join(__dirname,'dependencies','index',req.url.split("/")[req.url.split("/").length-1] ))
+},errorMiddleware);
+
 // app.get('/', function (req, res) {
 //  res.send(JSON.stringify({ Hello: 'World'}));
 // });
 
-/* code that helps see where your files are */ //{
 
-// }  /**/
 
 app.listen(port, () => console.log(`${file_name} app listening on port ${port}!`))
-
-//
