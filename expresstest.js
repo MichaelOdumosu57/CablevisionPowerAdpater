@@ -74,7 +74,9 @@ function directoryList(req,res,next){
 }
 app.get('/',fileMiddleware,errorMiddleware );
 app.get('/:file',fileMiddleware,errorMiddleware )
-app.get('/CablevisionPowerAdpater/dependencies/index/:file', function (req, res, next) {
+
+/*endpoint for all application dependencies*/ //{
+function dependencyEndpoint(req, res, next) {
     // console.log(   req.url  )
     // console.log(   path.join(projectPath,'dependencies/index',req.url.split("/")[req.url.split("/").length-1]   )   )
     
@@ -88,7 +90,13 @@ app.get('/CablevisionPowerAdpater/dependencies/index/:file', function (req, res,
     
     
 	res.sendFile(path.join(__dirname,'dependencies','index',req.url.split("/")[req.url.split("/").length-1] ))
-},errorMiddleware);
+}
+app.get('/CablevisionPowerAdpater/dependencies/index/:file', dependencyEndpoint,errorMiddleware);
+
+app.get('/CablevisionPowerAdpater/dependencies/fonts/:file',dependencyEndpoint,errorMiddleware);
+// }  /**/
+ 
+ 
 //
 // app.get('/', function (req, res) {
 //  res.send(JSON.stringify({ Hello: 'World'}));
