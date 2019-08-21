@@ -9,6 +9,20 @@ const cors = require('cors')
 // const ultraObject = require('./ultraObject.js')
 const http = require("https");
 
+/* application global variables*/ //{
+var projectPath = '/home/uoul/My_Computer/Projects/WindsorEmpire'
+var w_file = 'modfied.html'
+var redirects= {
+                    '/':'index.html',
+                    'startMyBusiness':'about.html',
+                    'contact':'contact.html',
+                    'projects':'projects.html',
+                    'blog':'blog.html',
+                    'credits':'credits.html',
+                    'services':'services.html',
+                }
+ // }  /**/
+
 
 app.get('/', function (req, res) {
  res.send(JSON.stringify({ Hello: 'World'}));
