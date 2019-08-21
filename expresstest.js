@@ -57,11 +57,13 @@ function fileMiddleware (req, res, next) {
 
 	
 }
-
-
-app.get('/', function (req, res) {
- res.send(JSON.stringify({ Hello: 'World'}));
-});
+function errorMiddleware(err,res,req,next){
+    res.sendFile(path.join(__dirname,  '404.html' ))
+}
+app.get('/',errorMiddleware);
+// app.get('/', function (req, res) {
+//  res.send(JSON.stringify({ Hello: 'World'}));
+// });
 
 /* code that helps see where your files are */ //{
 // var filesList = ''
