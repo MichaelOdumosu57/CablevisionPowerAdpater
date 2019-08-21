@@ -33,6 +33,8 @@ app.set('etag', false)
 
 function fileMiddleware (req, res, next) {
 
+    
+    res.append('Content-Security-Policy', 'upgrade-insecure-requests');
     /* determining home page*/ //{
     // at this point were good because I used a regex to modify the resouce endpoints in the files
     var file = 'index.html'
