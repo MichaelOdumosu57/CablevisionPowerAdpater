@@ -44,11 +44,12 @@ app.set('etag', false)
 function fileMiddleware (req, res, next) {
     
     console.log('got it')
+    // console.log(   req   )
     
-    res.sendFile(path.join(__dirname,"about.html"))
-    return
+    
     /* determining home page*/ //{
-    var file = 'index'
+    // at this point were good because I used a regex to modify the resouce endpoints in the files
+    var file = 'index.html'
 
     
     if(   req.params.file !== undefined   ){
@@ -58,7 +59,10 @@ function fileMiddleware (req, res, next) {
         
         
     }
+    
+    res.sendFile(path.join(__dirname,  file ))
     // }  /**/
+    return
     
     console.log(   'saw ' + file   )
     var response = res
@@ -196,47 +200,12 @@ app.get('/',  fileMiddleware);
 
 
 
-// app.get('/startMyBusiness', function (req, res, next) {
-//     console.log('saw it')
-// 	res.sendFile(path.join(projectPath,'about.html'))
-// });
 
-
-// app.get('/contact', function (req, res, next) {
-//     console.log('saw it')
-// 	res.sendFile(path.join(projectPath,'contact.html'))
-// });
-
-// app.get('/projects', function (req, res, next) {
-//     console.log('saw it')
-// 	res.sendFile(path.join(projectPath,'projects.html'))
-// });
-
-// app.get('/blog', function (req, res, next) {
-//     console.log('saw it')
-// 	res.sendFile(path.join(projectPath,'blog.html'))
-// });
-
-// app.get('/credits', function (req, res, next) {
-//     console.log('saw it')
-// 	res.sendFile(path.join(projectPath,'credits.html'))
-// });
-
-// app.get('/services', function (req, res, next) {
-// 	res.sendFile(path.join(projectPath,'services.html'))
-// });
 
 /*endpoint for all application dependencies*/ //{
 app.get('/dependencies/index/:file', function (req, res, next) {
     // console.log(   req.url  )
     // console.log(   path.join(projectPath,'dependencies/index',req.url.split("/")[req.url.split("/").length-1]   )   )
-	res.sendFile(path.join(projectPath,'dependencies','index',req.url.split("/")[req.url.split("/").length-1] ))
-});
-
-// }  /**/
-
-app.get('/myJS/:file', function (req, res, next) {
-    
     
     if(   req.params.file.indexOf('css') !== -1){
         
@@ -247,6 +216,12 @@ app.get('/myJS/:file', function (req, res, next) {
     }
     
     
+	res.sendFile(path.join(projectPath,'dependencies','index',req.url.split("/")[req.url.split("/").length-1] ))
+});
+
+// }  /**/
+
+app.get('/myJS/:file', function (req, res, next) {
     res.sendFile(path.join(projectPath,'myJS',req.params.file))
 });
 
