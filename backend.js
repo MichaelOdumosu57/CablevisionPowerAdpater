@@ -2,7 +2,7 @@
 /**/ //{
 // }  /**/
 
-
+function noHeroku(   dev_obj  ){
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 4200 // angular port rmbr to change this
@@ -244,5 +244,37 @@ app.listen(port, () => console.log(`${file_name} app listening on port ${port}!`
 
 
 // how does the shipengineAPI manage to take his goobly gook and turn it to a meaningful object
+}
+
+function heroku(   dev_obj   ){
+    const http = require('http');
+    const port = process.env.PORT || 3000
+    
+    const server = http.createServer((req, res) => {
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/plain');
+      res.end(   __dirname   );
+    });
+    
+    server.listen(port,() => {
+      console.log(`Server running at port `+port);
+    });
+    
+}
+
+if(   process.args[2] === undefined   ){
+    
+    
+    heroku()
+    
+    
+}
 
 
+if(   process.args[2] !== undefined   ){
+    
+    
+    noHeroku()
+    
+    
+}
