@@ -29,7 +29,34 @@ app.use(cors())
 app.use(compression())
 app.set('etag', false)
  // }  /**/
- 
+
+
+function fileMiddleware (req, res, next) {
+    
+    console.log('got it')
+    // console.log(   req   )
+    
+    
+    /* determining home page*/ //{
+    // at this point were good because I used a regex to modify the resouce endpoints in the files
+    var file = 'index.html'
+
+    
+    if(   req.params.file !== undefined   ){
+        
+        
+        file = redirects[req.params.file]
+        
+        
+    }
+    
+    res.sendFile(path.join(__dirname,  file ))
+    // }  /**/
+    return
+    
+
+	
+}
 
 
 app.get('/', function (req, res) {
