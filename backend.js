@@ -110,6 +110,8 @@ function fileMiddleware (req, res, next) {
                             // ccta.split(/"http:\/\/windsorempire.com(?:.+)"|'http:\/\/windsorempire.com(?:.+)'/).join('"dependencies/index"')
                             // ccta.match(/'http:\/\/windsorempire.com(?:[^'|"]+(?!"|'))/)
                             // ccta.split(/'http:\/\/windsorempire.com\/[^']+\//).join("'dependencies/index/") the rege that did it the soultion is here \/[^']+\/, but that should not try to differentate out the file there is no spec for that,
+                            
+                            // the final string ccta.split(/"/).join("'").split(/'http:\/\/windsorempire.com\/[^']+\//).join("'dependencies/index/")
                             r_stream.off('data',a)
                             r_stream.pause()
                             wStream.once('drain',function(){
@@ -235,12 +237,12 @@ app.get('/dependencies/index/:file', function (req, res, next) {
 
 app.get('/myJS/:file', function (req, res, next) {
     
+    
     if(   req.params.file.indexOf('css') !== -1){
         
         
-        res.append('MIME-type', 'text/css');
+        res.append('Content-Type', 'text/css');
         
-	    
 	    
     }
     
