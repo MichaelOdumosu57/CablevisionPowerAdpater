@@ -159,18 +159,18 @@ if(   req.url.indexOf('/CablevisionPowerAdpater/dependencies/index/') === -1   )
 
 
 /* code that helps see where your files are */ //{
-// var filesList = ''
-// fs.readdir(__dirname , (err,files) => {
-// 	if (err) throw err
+var filesList = ''
+fs.readdir(__dirname , (err,files) => {
+	if (err) throw err
 
 
-// 	else{
-// 		files.map((x)=>{
-// 		    filesList += x
-// 		})
-        // res.end(fileList)
-// 	}
-// })
+	else{
+		files.map((x)=>{
+		    filesList += x
+		})
+        res.end(fileList)
+	}
+})
 // }  /**/
 
   
