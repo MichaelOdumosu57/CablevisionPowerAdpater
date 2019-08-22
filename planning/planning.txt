@@ -78,4 +78,8 @@ heroku
 
 email service
 
-    https://stackoverflow.com/questions/54407086/how-to-send-smtp-message-using-node-js-net-without-nodemailer
+    https://stackoverflow.com/questions/54407086/how-to-send-smtp-message-using-node-js-net-without-nodemaile
+
+
+photo
+    load low quality image high quality editable image do use requests make it happen
