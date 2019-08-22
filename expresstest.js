@@ -32,11 +32,9 @@ app.set('etag', false)
 
 
 function fileMiddleware (req, res, next) {
+
     
-    console.log('got it')
-    // console.log(   req   )
-    
-    
+    res.append('Content-Security-Policy', 'upgrade-insecure-requests');
     /* determining home page*/ //{
     // at this point were good because I used a regex to modify the resouce endpoints in the files
     var file = 'index.html'
@@ -50,40 +48,62 @@ function fileMiddleware (req, res, next) {
         
     }
     
+    console.log(file)
+    if(   file === undefined   ){
+        
+        
+        res.sendFile(path.join(__dirname,  '404.html' ))
+        return
+        
+        
+    }
+    
+    
     res.sendFile(path.join(__dirname,  file ))
     // }  /**/
-    return
+    
     
 
 	
 }
-function errorMiddleware(err,res,req,next){
-    res.end(path.join(__dirname,  '404.html' ))
+function errorMiddleware(err,req,res,next){
+    res.send(path.join(__dirname,  '404.html' ))
 }
-function directoryList(res,req,next){
+function directoryList(req,res,next){
     var filesList = ''
-    // fs.readdir(__dirname , (err,files) => {
-    // 	if (err) throw err
-    
-    
-    // 	else{
-    // 		files.map((x)=>{
-    // 		    filesList += x
-    // 		})
-    //         res.end(fileList)
-    // 	}
-    // })
-    res.send('string')
+
+    res.send(__dirname)
 }
-app.get('/',directoryList);
+app.get('/',fileMiddleware,errorMiddleware );
+app.get('/:file',fileMiddleware,errorMiddleware )
+
+/*endpoint for all application dependencies*/ //{
+function dependencyEndpoint(req, res, next) {
+    // console.log(   req.url  )
+    // console.log(   path.join(projectPath,'dependencies/index',req.url.split("/")[req.url.split("/").length-1]   )   )
+    
+    if(   req.params.file.indexOf('css') !== -1){
+        
+        
+        res.append('Content-Type', 'text/css');
+        
+	    
+    }
+    
+    
+	res.sendFile(path.join(__dirname,'dependencies','index',req.url.split("/")[req.url.split("/").length-1] ))
+}
+app.get('/CablevisionPowerAdpater/dependencies/index/:file', dependencyEndpoint,errorMiddleware);
+
+app.get('/CablevisionPowerAdpater/dependencies/fonts/:file',dependencyEndpoint,errorMiddleware);
+// }  /**/
+ 
+ 
+//
 // app.get('/', function (req, res) {
 //  res.send(JSON.stringify({ Hello: 'World'}));
 // });
 
-/* code that helps see where your files are */ //{
 
-// }  /**/
 
 app.listen(port, () => console.log(`${file_name} app listening on port ${port}!`))
-
-//
