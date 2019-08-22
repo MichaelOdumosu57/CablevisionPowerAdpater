@@ -82,6 +82,7 @@ function directoryList(req,res,next){
 }
 app.get('/',fileMiddleware,errorMiddleware );
 app.get('/:file',fileMiddleware,errorMiddleware )
+app.post(/contact',
 
 /*endpoint for all application dependencies*/ //{
 function dependencyEndpoint(req, res, next) {

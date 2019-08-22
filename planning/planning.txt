@@ -73,7 +73,7 @@ heroku
         wheres the potrt
     https://www.freecodecamp.org/news/how-to-deploy-a-nodejs-app-to-heroku-from-github-without-installing-heroku-on-your-machine-433bec770efe/
 
-    
+    if app does not work sometimes you have to do TDD, and make sure all your dependencies get sent with uprade insecure requests
 
 
 email service
@@ -83,3 +83,27 @@ email service
 
 photo
     load low quality image high quality editable image do use requests make it happen
+
+
+
+links
+    social media links
+    need for facebook
+    need for twitter
+
+
+tachyions
+bootstrap
+css grid flexbox
+
+
+
+
+
+tmux setup
+
+    window 0 my depenendecies
+        pane 0 - uoul
+        pane 1 root
+
+

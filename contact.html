@@ -101,8 +101,6 @@ flexibility(document.documentElement);
 				<span class='menu-toggle-icon'></span>
 							</button>
 		</div>
-			
-			
 		</div>
 			<div class='ast-main-header-bar-alignment'><div class='main-header-bar-navigation'><nav itemtype='https://schema.org/SiteNavigationElement' itemscope='itemscope' id='site-navigation' class='ast-flex-grow-1 navigation-accessibility' role='navigation' aria-label='Site Navigation'><div class='main-navigation'><ul id='primary-menu' class='main-header-menu ast-nav-menu ast-flex ast-justify-content-flex-end  submenu-with-border astra-menu-animation-fade ' aria-expanded='false'>
 <li id='menu-item-509' class='menu-item menu-item-type-post_type menu-item-object-page menu-item-509'><a href='/'>Home</a></li>
@@ -209,12 +207,27 @@ flexibility(document.documentElement);
 				</div>
 				<div class='elementor-element elementor-element-bef937d elementor-widget elementor-widget-shortcode' data-id='bef937d' data-element_type='widget' data-widget_type='shortcode.default'>
 				<div class='elementor-widget-container'>
-					<div class='elementor-shortcode'><div class='wpforms-container ' id='wpforms-502'><form id='wpforms-form-502' class='wpforms-validate wpforms-form' data-formid='502' method='post' enctype='multipart/form-data' action='/contact/' novalidate='novalidate'><div class='wpforms-field-container'><div id='wpforms-502-field_0-container' class='wpforms-field wpforms-field-name' data-field-id='0'><label class='wpforms-field-label wpforms-label-hide' for='wpforms-502-field_0'>Your Name  <span class='wpforms-required-label'>*</span></label><input type='text' id='wpforms-502-field_0' class='wpforms-field-large wpforms-field-required' name='wpforms[fields][0]' placeholder='Your Name ' required=''></div><div id='wpforms-502-field_1-container' class='wpforms-field wpforms-field-email' data-field-id='1'><label class='wpforms-field-label wpforms-label-hide' for='wpforms-502-field_1'>Email <span class='wpforms-required-label'>*</span></label><input type='email' id='wpforms-502-field_1' class='wpforms-field-large wpforms-field-required' name='wpforms[fields][1]' placeholder='Email Address' required=''></div><div id='wpforms-502-field_2-container' class='wpforms-field wpforms-field-textarea' data-field-id='2'><label class='wpforms-field-label wpforms-label-hide' for='wpforms-502-field_2'>Your Message <span class='wpforms-required-label'>*</span></label><textarea id='wpforms-502-field_2' class='wpforms-field-medium wpforms-field-required' name='wpforms[fields][2]' placeholder='Message' required=''></textarea></div></div><div class='wpforms-field wpforms-field-hp'><label for='wpforms-502-field-hp' class='wpforms-field-label'>Name</label><input type='text' name='wpforms[hp]' id='wpforms-502-field-hp' class='wpforms-field-medium'></div><div class='wpforms-submit-container'><input type='hidden' name='wpforms[id]' value='502'><input type='hidden' name='wpforms[author]' value='1'><input type='hidden' name='wpforms[post_id]' value='505'><button type='submit' name='wpforms[submit]' class='wpforms-submit ' id='wpforms-submit-502' value='wpforms-submit' data-alt-text='Sending...'>SEND MESSAGE</button></div></form></div>	</div>
+					<div class='elementor-shortcode'><div class='wpforms-container ' id='wpforms-502'>
+
+					<div class='wpforms-field-container'>
+					    <div id='wpforms-502-field_0-container' class='wpforms-field wpforms-field-name' data-field-id='0'>
+					    <label class='wpforms-field-label wpforms-label-hide' for='wpforms-502-field_0'>Your Name
+					        <span class='wpforms-required-label'>*</span>
+					    </label>
+					    <input type='text' id='wpforms-502-field_0' class='wpforms-field-large wpforms-field-required' name='wpforms[fields][0]' placeholder='Your Name ' required=''>
+					 </div>
+					    <div id='wpforms-502-field_1-container' class='wpforms-field wpforms-field-email' data-field-id='1'><label class='wpforms-field-label wpforms-label-hide' for='wpforms-502-field_1'>Email <span class='wpforms-required-label'>*</span></label><input type='email' id='wpforms-502-field_1' class='wpforms-field-large wpforms-field-required' name='wpforms[fields][1]' placeholder='Email Address' required=''></div><div id='wpforms-502-field_2-container' class='wpforms-field wpforms-field-textarea' data-field-id='2'><label class='wpforms-field-label wpforms-label-hide' for='wpforms-502-field_2'>Your Message <span class='wpforms-required-label'>*</span></label><textarea id='wpforms-502-field_2' class='wpforms-field-medium wpforms-field-required' name='wpforms[fields][2]' placeholder='Message' required=''></textarea></div></div><div class='wpforms-field wpforms-field-hp'><label for='wpforms-502-field-hp' class='wpforms-field-label'>Name</label><input type='text' name='wpforms[hp]' id='wpforms-502-field-hp' class='wpforms-field-medium'></div><div class='wpforms-submit-container'><input type='hidden' name='wpforms[id]' value='502'><input type='hidden' name='wpforms[author]' value='1'><input type='hidden' name='wpforms[post_id]' value='505'><a href ='mailto:Chef.lia.w@gmail.com'><button class = 'wpforms-myEmailButton'  type='submit'  data-alt-text='Sending...'>Send an Email</button></a></div></div>	</div>
 				</div>
 				</div>
 						</div>
 			</div>
 		</div>
+		<script>
+		    document.querySelector(   '.wpforms-field-name'   ).hidden  = true
+		    document.querySelector(   '.wpforms-field-email'   ).hidden  = true
+		    document.querySelector(   '.wpforms-field-textarea'   ).hidden  = true
+		    
+		</script>
 				<div class='elementor-element elementor-element-150c869 elementor-column elementor-col-50 elementor-inner-column' data-id='150c869' data-element_type='column'>
 			<div class='elementor-column-wrap  elementor-element-populated'>
 							<div class='elementor-background-overlay'></div>
@@ -271,7 +284,7 @@ flexibility(document.documentElement);
 					<span class='elementor-screen-only'>Twitter</span>
 					<i class='fa fa-twitter'></i>
 				</a>
-							<a class='elementor-icon elementor-social-icon elementor-social-icon-google-plus' href='#'>
+							<a class='elementor-icon elementor-social-icon elementor-social-icon-google-plus' href='mailto:Chef.lia.w@gmail.com'>
 					<span class='elementor-screen-only'>Google-plus</span>
 					<i class='fa fa-google-plus'></i>
 				</a>
