@@ -75,6 +75,8 @@ heroku
 
     if app does not work sometimes you have to do TDD, and make sure all your dependencies get sent with uprade insecure requests
 
+    for the 404 routing heroku donest understand where ther are more slacshes
+
 
 email service
 

@@ -37,7 +37,7 @@ function fileMiddleware (req, res, next) {
     if(   process.argv[2] !== 'httpOnlyPlease'   ){
         
         
-        // res.append('Content-Security-Policy', 'upgrade-insecure-requests');
+        res.append('Content-Security-Policy', 'upgrade-insecure-requests');
         
         
     }
