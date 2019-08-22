@@ -19,8 +19,8 @@ fs.readdir(process.argv[2], (a,b)=>{
     })
 })
 
-ccta.match(/'http:\/\/windsorempire.com\/(?:[^']+(?!"|'))/)
+// ccta.match(/'http:\/\/windsorempire.com\/(?:[^']+(?!"|'))/)
 
-ccta.match(/'http:\/\/windsorempire.com\/[^']+\//)
+// ccta.match(/'http:\/\/windsorempire.com\/[^']+\//)
 
-ccta.match(/'http:\/\/windsorempire.com(?:\/(?=[^'|"]+))(?!'|")/)
+// ccta.match(/'http:\/\/windsorempire.com(?:\/(?=[^'|"]+))(?!'|")/)
