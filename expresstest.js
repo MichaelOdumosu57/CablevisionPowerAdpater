@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 4200 // angular port rmbr to change this
-const file_name = __filename.split("/")[__filename.split("/").length-1].split(".js")[0]
+const fileName = __filename.split("/")[__filename.split("/").length-1].split(".js")[0]
 const path = require('path')
 const fs = require('fs');
 const compression = require('compression')
@@ -37,7 +37,7 @@ function fileMiddleware (req, res, next) {
     if(   process.argv[2] !== 'httpOnlyPlease'   ){
         
         
-        res.append('Content-Security-Policy', 'upgrade-insecure-requests');
+        // res.append('Content-Security-Policy', 'upgrade-insecure-requests');
         
         
     }
@@ -80,9 +80,10 @@ function directoryList(req,res,next){
 
     res.send(__dirname)
 }
+
+
 app.get('/',fileMiddleware,errorMiddleware );
 app.get('/:file',fileMiddleware,errorMiddleware )
-app.post(/contact',
 
 /*endpoint for all application dependencies*/ //{
 function dependencyEndpoint(req, res, next) {
@@ -104,13 +105,12 @@ app.get('/CablevisionPowerAdpater/dependencies/index/:file', dependencyEndpoint,
 
 app.get('/CablevisionPowerAdpater/dependencies/fonts/:file',dependencyEndpoint,errorMiddleware);
 // }  /**/
- 
- 
-//
-// app.get('/', function (req, res) {
-//  res.send(JSON.stringify({ Hello: 'World'}));
-// });
+app.all([/[^CablevisionPowerAdpater\/dependencies\/]/,/[^\/.+]/,/[^\/]/],(req,res,next)=>{
+    console.log('got request for',req.url)
+    res.sendFile(path.join(__dirname,  '404.html'))
+})
 
 
-
-app.listen(port, () => console.log(`${file_name} app listening on port ${port}!`))
+app.listen(port,() => {
+  console.log(`${fileName} running at port `+port);
+});

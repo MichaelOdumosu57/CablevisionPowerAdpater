@@ -106,4 +106,10 @@ tmux setup
         pane 0 - uoul
         pane 1 root
 
+    window 1 github
+        
+    window 2 angular
+    
+    window 3 root folder
 
+    window 4 express app
