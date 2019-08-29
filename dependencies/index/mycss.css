@@ -55,6 +55,14 @@ html .elementor-7 .elementor-element.elementor-element-7ac9ca5 > .elementor-back
 }
 
 
-html .ast-theme-transparent-header .main-header-bar, .ast-theme-transparent-header.ast-header-break-point .main-header-menu, .ast-theme-transparent-header.ast-header-break-point .main-header-bar{
+html .ast-theme-transparent-header .main-header-bar:not(.avoid-this), .ast-theme-transparent-header.ast-header-break-point .main-header-menu:not(.avoid-this), .ast-theme-transparent-header.ast-header-break-point .main-header-bar:not(.avoid-this){
     background-color:#FFC0CB;
 }
+
+
+@media screen and (max-width: 544px) {
+    #masthead  .ast-site-title-wrap{
+        display:none;
+    }
+}
+
