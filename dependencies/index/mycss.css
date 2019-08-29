@@ -13,34 +13,48 @@ html .elementor-6 .elementor-element.elementor-element-bfd172b .elementor-image 
         box-shadow: 10px 10px 0px 1px rgba(0,0,0,0.07);
 }
 
-html .elementor-6 .elementor-element.elementor-element-33a79095 > .elementor-background-overlay{
-    /*background:null;*/
-    opacity:0;
-}
 
-html .elementor-widget-icon-box .elementor-icon-box-content{
+
+html .elementor-widget-icon-box .elementor-icon-box-content:not(.avoid-this){
     background:rgba(0,0,0,.265);
     display:inline-block;
     
 }
-
-html .elementor-5 .elementor-element.elementor-element-d7d8b56 .elementor-background-overlay{
-    filter: brightness( 127% ) contrast( 96% ) saturate( 111% ) blur( 0px ) hue-rotate( 0deg ) !important;
-}
-
-
-html .elementor-5 .elementor-element.elementor-element-d7d8b56:not(.elementor-motion-effects-element-type-background), .elementor-5 .elementor-element.elementor-element-d7d8b56 > .elementor-motion-effects-container > .elementor-motion-effects-layer{
-        filter: brightness( 101% ) contrast( 96% ) saturate( 111% ) blur( 0px ) hue-rotate( 0deg ) !important;
-        
-}
-
-.elementor-6 .elementor-element.elementor-element-33a79095:not(.elementor-motion-effects-element-type-background), .elementor-6 .elementor-element.elementor-element-33a79095 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-        filter: brightness( 126% ) contrast( 96% ) saturate( 111% ) blur( 0px ) hue-rotate( 0deg ) !important;
-}
-
 
 /*this is the cs for the about me words*/
 html .elementor-5 [class*="elementor-element-"]{
     color: #FFC0CB !important;
 }
 /**/
+
+html .elementor-5 .elementor-element.elementor-element-d7d8b56 .elementor-background-overlay{
+    filter: brightness( 127% ) contrast( 96% ) saturate( 111% ) blur( 0px ) hue-rotate( 0deg ) !important;
+}
+
+
+
+
+
+html .elementor-6 .elementor-element.elementor-element-33a79095 > .elementor-background-overlay{
+    /*background:null;*/
+    opacity:0;
+}
+
+
+html .elementor-6 .elementor-element.elementor-element-33a79095:not(.elementor-motion-effects-element-type-background), .elementor-6 .elementor-element.elementor-element-33a79095 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+        filter: brightness( 126% ) contrast( 96% ) saturate( 111% ) blur( 0px ) hue-rotate( 0deg ) !important;
+}
+
+
+
+/*projects*/
+
+html .elementor-7 .elementor-element.elementor-element-7ac9ca5 > .elementor-background-overlay{
+    filter: brightness( 127% ) contrast( 96% ) saturate( 111% ) blur( 0px ) hue-rotate( 0deg ) !important;
+    display:none;
+}
+
+
+html .ast-theme-transparent-header .main-header-bar, .ast-theme-transparent-header.ast-header-break-point .main-header-menu, .ast-theme-transparent-header.ast-header-break-point .main-header-bar{
+    background-color:#FFC0CB;
+}
