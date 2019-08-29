@@ -119,27 +119,9 @@ wordpress
 
 
 css
-    your problem file is probably post-6.css but each site must have its own css giving out this problem
+    your problem is sprinkied throughout the site with css specificity making it very hard to acccess, go in and modiify each one
     
-    you must apply this universal style to all your element images
-to
-.elementor-6 .elementor-element.elementor-element-bfd172b .elementor-image img {
-    width: 88%;
-    filter: brightness( 103% ) contrast( 96% ) saturate( 81% ) blur( 0px ) hue-rotate( 336deg );
-    border-radius: 4px 4px 4px 4px;
-    box-shadow: 10px 10px 0px 1px rgba(0,0,0,0.07);
-}
-
-from
-    <style>
-    .elementor-6 .elementor-element.elementor-element-238cce3 .elementor-image img{
-            width: 88%;
-            filter: none;
-            border-radius: 4px 4px 4px 4px;
-            box-shadow: none;
-    }
-    </style>
-
+    have lia give you images for her company logo that are more pink
 
 
 tmux setup

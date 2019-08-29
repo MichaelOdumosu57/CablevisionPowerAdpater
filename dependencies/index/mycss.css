@@ -14,10 +14,33 @@ html .elementor-6 .elementor-element.elementor-element-bfd172b .elementor-image 
 }
 
 html .elementor-6 .elementor-element.elementor-element-33a79095 > .elementor-background-overlay{
-    background:null;
+    /*background:null;*/
     opacity:0;
 }
 
 html .elementor-widget-icon-box .elementor-icon-box-content{
-    background:rgba(0,0,0,.12);
+    background:rgba(0,0,0,.265);
+    display:inline-block;
+    
 }
+
+html .elementor-5 .elementor-element.elementor-element-d7d8b56 .elementor-background-overlay{
+    filter: brightness( 127% ) contrast( 96% ) saturate( 111% ) blur( 0px ) hue-rotate( 0deg ) !important;
+}
+
+
+html .elementor-5 .elementor-element.elementor-element-d7d8b56:not(.elementor-motion-effects-element-type-background), .elementor-5 .elementor-element.elementor-element-d7d8b56 > .elementor-motion-effects-container > .elementor-motion-effects-layer{
+        filter: brightness( 101% ) contrast( 96% ) saturate( 111% ) blur( 0px ) hue-rotate( 0deg ) !important;
+        
+}
+
+.elementor-6 .elementor-element.elementor-element-33a79095:not(.elementor-motion-effects-element-type-background), .elementor-6 .elementor-element.elementor-element-33a79095 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+        filter: brightness( 126% ) contrast( 96% ) saturate( 111% ) blur( 0px ) hue-rotate( 0deg ) !important;
+}
+
+
+/*this is the cs for the about me words*/
+html .elementor-5 [class*="elementor-element-"]{
+    color: #FFC0CB !important;
+}
+/**/
