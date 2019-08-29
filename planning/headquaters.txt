@@ -1,0 +1,203 @@
+
+
+
+business
+    
+    she has a food delivery business she cooks
+    employees
+        just her but refer to site as team consistent
+
+    location
+        in the house
+        medium sized kitchen getting more applicances
+        business color is in pink, its a signuture you will remembemr the business by here
+
+    customers
+        my goal
+            people who are working people, careers
+        current
+            serving working class peoplpe
+
+    menu
+        japanese food, west indian
+        
+
+
+    delivery method
+        doesnt like people coming to the house
+        
+        
+    
+    
+
+about the owner
+
+    Thalia college degree in accouting business classes
+    she has a business card, with an important
+    caught a case, start a business get it going stay with it doesnt want
+    took a lot of time for 2018
+    
+    needs website quick,
+    going upstate for a cooking job if she leaves she goes upstate if you
+    get that job
+    team
+        best friend not in town
+        a chef who needs ppl
+        her team has their own bills
+    i dont need to get in contact
+    
+    I want her to start Lucidchart
+    relaxed emotional
+    
+
+    she does not have a car
+    part time
+
+
+    believe in God, she wants to take me place
+    
+
+    she has a social media method, soical media aspect of her business
+    it
+    
+    socially aware
+
+
+
+
+
+
+Software Developer
+
+hosting
+
+    BigCommerce. ...
+    Shopify. ...
+    Weebly. ...
+    Squarespace. ...
+    WordPress.com. ...
+    Wix. ...
+    BoldGrid. ...
+    GoDaddy Website Builder. GoDaddy is one of the largest domain name and hosting service providers in the world.
+    heroku
+    
+        https://devcenter.heroku.com/articles/deploying-nodejs
+    
+            wheres the potrt
+        https://www.freecodecamp.org/news/how-to-deploy-a-nodejs-app-to-heroku-from-github-without-installing-heroku-on-your-machine-433bec770efe/
+    
+        if app does not work sometimes you have to do TDD, and make sure all your dependencies get sent with uprade insecure requests
+    
+        for the 404 routing heroku donest understand where ther are more slacshes
+    
+
+email service
+
+    https://stackoverflow.com/questions/54407086/how-to-send-smtp-message-using-node-js-net-without-nodemaile
+
+
+photo
+    load low quality image high quality editable image do use requests make it happen
+
+
+
+links
+    social media links
+    need for facebook
+    need for twitter
+
+
+tachyions
+bootstrap
+css grid flexbox
+
+regexp
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+
+wordpress
+  https://wordpress.org/plugins/simple-website-redirect/
+
+
+css
+    your problem file is probably post-6.css but each site must have its own css giving out this problem
+    
+    you must apply this universal style to all your element images
+to
+.elementor-6 .elementor-element.elementor-element-bfd172b .elementor-image img {
+    width: 88%;
+    filter: brightness( 103% ) contrast( 96% ) saturate( 81% ) blur( 0px ) hue-rotate( 336deg );
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 10px 10px 0px 1px rgba(0,0,0,0.07);
+}
+
+from
+    <style>
+    .elementor-6 .elementor-element.elementor-element-238cce3 .elementor-image img{
+            width: 88%;
+            filter: none;
+            border-radius: 4px 4px 4px 4px;
+            box-shadow: none;
+    }
+    </style>
+
+
+
+tmux setup
+
+    window 0 my depenendecies
+        pane 0 - uoul
+        pane 1 root
+
+    window 1 github
+        
+    window 2 angular
+    
+    window 3 node folder
+
+    window 4 express app
+
+testing
+    
+    unit testing- the single standalone feature works
+    integration - when software comes on board they work fine
+    regression - new code does not affect existing API
+
+
+
+angular
+
+    our end goals are to be able to have the owner modify the site on their own
+    I was told its impt to have unit testing so even though stuff should be in services
+    
+    so our meaningingful components (component + services) should be put together for a while
+
+    first things first get at least 6 css style and focus on being responsive
+
+    use lucidchart to display your goals
+
+    https://medium.com/@davembush/adding-css-and-javascript-to-an-angular-cli-project-2b843a8283f3
+
+    css
+    
+        npm install --save-dev tachyons@4.10.0
+        angular.json
+        
+        -------------
+        "styles": [
+        "src/styles.css"
+        ],
+        ---------------
+        
+        
+        
+        ----------->
+        
+        -------------
+        "styles": [
+        "src/styles.css",
+        "node_modules/tachyons/css/tachyons.min.css"
+        ],
+        ---------------
+
+        ng serve
+         
