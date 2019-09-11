@@ -5,14 +5,15 @@
     "main": "backend.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node expresstest.js"
+        "start": "node expresstest.js httpOnlyPlease"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
         "compression": "^1.7.4",
         "cors": "^2.8.5",
-        "express": "^4.17.1"
+        "express": "^4.17.1",
+        "selenium-webdriver": "^4.0.0-alpha.5"
     },
     "engines": {
         "node": "10.x"

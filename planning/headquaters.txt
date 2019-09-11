@@ -69,6 +69,10 @@ about the owner
 
 Software Developer
 
+
+checkout
+    humannitec
+    webflow for admin end user transfers
 hosting
 
     BigCommerce. ...
@@ -99,6 +103,8 @@ email service
 photo
     load low quality image high quality editable image do use requests make it happen
 
+polyfills
+    https://angular.io/guide/browser-support
 
 
 links
@@ -123,6 +129,7 @@ css
     
     have lia give you images for her company logo that are more pink
 
+    tachyions.min.css v 4.10.-0
 
 tmux setup
 
@@ -140,10 +147,18 @@ tmux setup
 
 testing
     
+    https://wiki.saucelabs.com/display/DOCS/Platform+Configurator#/
+    https://wiki.saucelabs.com/display/DOCS/Test+Configuration+Options
     unit testing- the single standalone feature works
     integration - when software comes on board they work fine
     regression - new code does not affect existing API
 
+    i need to test on website functionality as well as the layout is working in selenium
+        functionality
+        layout
+        feature detection
+    
+    with feature detection use inline css
 
 
 angular
@@ -177,9 +192,4 @@ angular
         -------------
         "styles": [
         "src/styles.css",
-        "node_modules/tachyons/css/tachyons.min.css"
-        ],
-        ---------------
-
-        ng serve
-         
+        "node_modules/tachyons/css/tachyons.min
