@@ -67,3 +67,7 @@ html .ast-theme-transparent-header .main-header-bar:not(.avoid-this), .ast-theme
     }
 }
 
+/*contact info*/
+.elementor-505 .elementor-element.elementor-element-3906703:not(.elementor-motion-effects-element-type-background), .elementor-505 .elementor-element.elementor-element-3906703 > .elementor-motion-effects-container > .elementor-motion-effects-layer{
+    background-image:"/CablevisionPowerAdpater/dependencies/index/"
+}

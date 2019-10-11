@@ -69,6 +69,10 @@ about the owner
 
 Software Developer
 
+main web design pricinple
+
+    ask about the screen, the browser, the OS and the device
+
 
 checkout
     humannitec
@@ -131,6 +135,13 @@ css
 
     tachyions.min.css v 4.10.-0
 
+    polyfills needed
+        border radius
+
+    you element components must have the position absolute so it can  move with out breaking the window border or the containing app-root
+    everything inside a component however musg
+    
+
 tmux setup
 
     window 0 my depenendecies
@@ -160,6 +171,22 @@ testing
     
     with feature detection use inline css
 
+    so to  listen to fn in lifecycle  hooks you must call the hooks again because in karma, with Testbed.createComponent, the compoent is redenred in a context
+        Jasmine might not have access to so you must again call the fn like a unit test to see if it fired
+
+    to access creden u put in a ssl file
+
+    sauce labs expired so I cant test the eventListener but i think everything is fine
+
+    there should be a data tyoe that can easily  change from a primitive to a sequence
+
+    changing the wordsval
+        error
+            if theres one for something not consective in wordsVal, error, u have to take it outputting
+            if we have more elements than specifc data
+
+github
+    repo:https://github.com/MichaelOdumosu57/MapConfigurer.git
 
 angular
 
@@ -170,9 +197,54 @@ angular
 
     first things first get at least 6 css style and focus on being responsive
 
-    use lucidchart to display your goals
+    
 
+    use lucidchart to display your goals
     https://medium.com/@davembush/adding-css-and-javascript-to-an-angular-cli-project-2b843a8283f3
+
+    so for syntax,
+        wordsval0
+        
+        words - component name
+        val - css global styling
+        bool - wheter to display or not
+
+
+        contents
+            meaning
+                val   - a value that can be expressed in DOM
+                bool  - whether to have an item appear or not
+                Seq   - whether to show several items
+                group - see positioning object, when u
+                GroupObject -  object to get data from the service back to the component instance
+                suffix# - the id for specific item
+
+            true meaning can be found in the service of the component
+
+        positioning object
+            since we refuse to have nested elements, we must associate a group of elements and give them an outside specifc
+            fn that will properly calculate positioning and dimensions, for each instance of the component,
+        
+            the suffix used is group and when you use this it refers to each component instance not the specific word
+            if there is no suffix  components will be added in a default positioning order,
+            if there is a  suffix that means there is a a specific positioning order for that componennt instance
+            so far our problem in ie is that on zoom down it kind ignores the left outputting but zoom up restores it
+        
+            we also need to access the DOM Element for better positioning, to access, everything and the component itself
+      
+            @ViewChildren('myval', { read: ElementRef })  appMyContainer: any;
+            @ViewChildren('myval')  app_wordsMyElements: any;
+            
+            where myval isa template varible on app-words the component selector
+
+        when elements are missing
+            facts
+                1. I cannot go back in wordsVal
+                2. if an element, there is a least 1 copy with the id of any string past the index of this.wordsValInde[0]
+                3. if there is a skip yr skipping at least
+
+      window
+          use this resource to get the window https://brianflove.com/2018/01/11/angular-window-provider/
 
     css
     
@@ -193,3 +265,34 @@ angular
         "styles": [
         "src/styles.css",
         "node_modules/tachyons/css/tachyons.min
+
+
+        should I just do everything using top or have css values committed to each horiz vert combo
+
+
+circleCI
+    cant do this to get env vars
+    curl [url] -H 'cache-control: no-cache'
+    use a post request to defeat the cache problem
+
+
+gits
+    1.
+        focusing on making sure the dashed lines can be properlly controlled and render uniformally through webpages
+            so for later we plan to have the original style bootstrap from the serivce, although we should have this done through css
+            I see that the values between services and components are not dynamically linked
+
+  
+js tips
+                    ...Array.from(Array(1),(x,i)=> {
+                        return {
+                        override:'true',
+                        css:{
+                            position:'relative',
+                            bottom:'234px',
+                            left:'600px',
+                            'fontSize':'16px'
+                        }
+                    }})
+
+when creating array and you want to be neat                    

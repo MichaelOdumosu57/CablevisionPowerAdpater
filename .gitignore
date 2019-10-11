@@ -1,5 +1,2 @@
-ultraObject*
-node_modules
-.zip
-.planning.txt
-
+sec/
+node_modules/
